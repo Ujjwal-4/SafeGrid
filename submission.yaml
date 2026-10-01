@@ -13,14 +13,12 @@ team:
   track: "AI"                          # REQUIRED - one of: AI | DevOps | Sustainability | Open
   lead:
     name: "Ujjwal Shakya"              # REQUIRED
-    email: ""                          # REQUIRED - TODO: add the team lead's email before pushing
+    email: "ujjwalshakya486a@gmail.com"                          # REQUIRED - TODO: add the team lead's email before pushing
   members:
     - name: "Lakshya Samay Singh"
-      email: ""
+      email: "lakshya2004supernova@gmail.com"
     - name: "Kshitij Sharma"
-      email: ""
-    - name: "Ruthvik Kattamanchi"
-      email: ""
+      email: "kshitij.btmtcs1232824@nfsu.ac.in "
 
 submission:
   title: "SafeGrid: State-to-Zone Crime Hotspot Intelligence Platform"
