@@ -1,0 +1,48 @@
+domain: "women_children"
+name: "Crimes Against Women and Children"
+governing_law: "Chapter V of Bharatiya Nyaya Sanhita, 2023 (BNS) - Offences Against Women and Children; POCSO Act (Protection of Children from Sexual Offences Act)"
+required_evidence: "Audio/video recordings, dynamic electronic communications (chats/messages), medical forensic examinations, magistrate statements (under BSA 2023)"
+color: "#d946ef"
+geo_unit: "district"
+categories:
+  - "domestic_violence"
+  - "sexual_offenses"
+  - "child_abuse"
+aggregation_window: "weekly"
+indicators:
+  - name: "incident_count"
+    type: "count"
+    unit: "incidents"
+    weight: 0.35
+    description: "Total reported offences against women and minors"
+  - name: "category_severity"
+    type: "weighted_index"
+    unit: "severity_score"
+    weight: 0.45
+    description: "Severity index (POCSO/Child Abuse: 1.0, Sexual Offenses: 0.95, Domestic Violence: 0.75)"
+  - name: "verified_tip_density"
+    type: "rate"
+    unit: "per_sqkm"
+    weight: 0.20
+    description: "Density of validated confidential reports and helpline calls"
+scoring_method:
+  method: "weighted_composite"
+  normalization: "min_max"
+  thresholds:
+    low: 0.25
+    medium: 0.55
+    high: 0.80
+report_template:
+  title: "Women & Child Safety Intelligence Weekly Bulletin"
+  classification: "CONFIDENTIAL / LAW ENFORCEMENT SENSITIVE"
+  aggregation_period: "weekly"
+  sections:
+    - id: "executive_summary"
+      name: "Vulnerable Demographics Safety Overview"
+      required: true
+    - id: "indicator_breakdown"
+      name: "Offence Distribution & Severity Analysis"
+      required: true
+    - id: "spatial_hotspots"
+      name: "High-Risk Zones & Surveillance Points"
+      required: true

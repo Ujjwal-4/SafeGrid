@@ -1,0 +1,61 @@
+Helpline_Ack_No,Jurisdiction_District,Complaint_Summary_Location,Offence_Category,Logged_At,Suspect_Details,Estimated_Value_INR
+ACK-1930-05001,South,"Digital incident / transfer near SDA Market, Opp IIT Gate",illicit_storage,2026-05-26 17:11:00,Suspect tracked via IP & transaction trace,66661
+ACK-1930-05002,West,"Digital incident / transfer near District Centre, Janakpuri",drug_trafficking,2026-05-28 11:00:00,Suspect tracked via IP & transaction trace,66151
+ACK-1930-05003,Outer North,Digital incident / transfer near Holambi Kalan Railway Crossing,rioting,2026-09-21 13:10:00,Suspect tracked via IP & transaction trace,220743
+ACK-1930-05004,Outer North,Digital incident / transfer near Shahbad Dairy Block A,cheating_forgery,2026-07-28 02:50:00,Suspect tracked via IP & transaction trace,72102
+ACK-1930-05005,North,"Digital incident / transfer near Mall Road, Civil Lines",cheating_forgery,2026-06-19 07:33:00,Suspect tracked via IP & transaction trace,17434
+ACK-1930-05006,Outer North,Digital incident / transfer near Bawana Industrial Area Sector 2,financial_fraud,2026-06-08 08:41:00,Suspect tracked via IP & transaction trace,160069
+ACK-1930-05007,New Delhi,"Digital incident / transfer near Near Shivaji Stadium Metro, New Delhi",illicit_storage,2026-09-07 04:34:00,Suspect tracked via IP & transaction trace,168730
+ACK-1930-05008,South West,"Digital incident / transfer near Sadhu Vaswani Marg, Delhi Cantt",drug_trafficking,2026-05-16 14:32:00,Suspect tracked via IP & transaction trace,145969
+ACK-1930-05009,South West,Digital incident / transfer near Mahipalpur Bypass near NH-48,rioting,2026-09-26 09:47:00,Suspect tracked via IP & transaction trace,136615
+ACK-1930-05010,North,"Digital incident / transfer near ISBT Kashmere Gate, Departure Block",illicit_storage,2026-08-22 04:15:00,Suspect tracked via IP & transaction trace,238061
+ACK-1930-05011,South,"Digital incident / transfer near Press Enclave Road, Saket District Centre",drug_trafficking,2026-06-01 12:54:00,Suspect tracked via IP & transaction trace,39831
+ACK-1930-05012,South West,"Digital incident / transfer near Sadhu Vaswani Marg, Delhi Cantt",illicit_storage,2026-09-16 01:05:00,Suspect tracked via IP & transaction trace,50975
+ACK-1930-05013,South East,Digital incident / transfer near Okhla Industrial Area Phase 3,rioting,2026-05-23 22:22:00,Suspect tracked via IP & transaction trace,162615
+ACK-1930-05014,North West,Digital incident / transfer near Near Azadpur Mandi Gate 4,drug_trafficking,2026-08-10 23:44:00,Suspect tracked via IP & transaction trace,61585
+ACK-1930-05015,East,Digital incident / transfer near Laxmi Nagar Commercial Complex,rioting,2026-08-26 18:41:00,Suspect tracked via IP & transaction trace,57639
+ACK-1930-05016,South East,"Digital incident / transfer near Central Market, Lajpat Nagar II",cheating_forgery,2026-05-10 21:40:00,Suspect tracked via IP & transaction trace,67343
+ACK-1930-05017,North,"Digital incident / transfer near Old Delhi Railway Station, Platform 1 Exit",rioting,2026-08-28 22:02:00,Suspect tracked via IP & transaction trace,46531
+ACK-1930-05018,Noida Central,"Digital incident / transfer near Sector 18 Atta Market, Commercial Hub",cheating_forgery,2026-08-21 15:36:00,Suspect tracked via IP & transaction trace,24821
+ACK-1930-05019,Outer North,"Digital incident / transfer near GT Karnal Road, Singhu Border",financial_fraud,2026-06-07 06:53:00,Suspect tracked via IP & transaction trace,23669
+ACK-1930-05020,New Delhi,"Digital incident / transfer near Block B, Inner Circle, Connaught Place",financial_fraud,2026-06-21 05:38:00,Suspect tracked via IP & transaction trace,81162
+ACK-1930-05021,Central,Digital incident / transfer near GB Road near Ajmeri Gate,rioting,2026-08-13 23:02:00,Suspect tracked via IP & transaction trace,104959
+ACK-1930-05022,North,"Digital incident / transfer near ISBT Kashmere Gate, Departure Block",identity_theft,2026-06-11 22:11:00,Suspect tracked via IP & transaction trace,102196
+ACK-1930-05023,Noida Central,"Digital incident / transfer near Sector 18 Atta Market, Commercial Hub",cheating_forgery,2026-07-15 23:33:00,Suspect tracked via IP & transaction trace,128682
+ACK-1930-05024,North West,"Digital incident / transfer near Shalimar Bagh, AA Block Market",rioting,2026-09-09 19:38:00,Suspect tracked via IP & transaction trace,124792
+ACK-1930-05025,West,"Digital incident / transfer near Subhash Nagar Market, Block 6",drug_trafficking,2026-07-26 21:20:00,Suspect tracked via IP & transaction trace,39903
+ACK-1930-05026,Gurugram East,"Digital incident / transfer near Galleria Market, DLF Phase 4",illicit_storage,2026-08-15 01:04:00,Suspect tracked via IP & transaction trace,18240
+ACK-1930-05027,Outer,"Digital incident / transfer near Outer Ring Road, Paschim Vihar West",online_harassment,2026-09-18 00:52:00,Suspect tracked via IP & transaction trace,177284
+ACK-1930-05028,South West,"Digital incident / transfer near Sadhu Vaswani Marg, Delhi Cantt",rioting,2026-08-02 20:53:00,Suspect tracked via IP & transaction trace,217413
+ACK-1930-05029,Noida Central,Digital incident / transfer near Sector 59 Metro Station area,drug_trafficking,2026-09-18 22:40:00,Suspect tracked via IP & transaction trace,214432
+ACK-1930-05030,Rohini,"Digital incident / transfer near Sector 3 Market, Rohini",drug_trafficking,2026-09-02 00:47:00,Suspect tracked via IP & transaction trace,177676
+ACK-1930-05031,Central,"Digital incident / transfer near Asaf Ali Road, Turkman Gate",drug_trafficking,2026-06-14 17:34:00,Suspect tracked via IP & transaction trace,106593
+ACK-1930-05032,North East,"Digital incident / transfer near Seelampur Market, GT Road",cheating_forgery,2026-09-27 22:56:00,Suspect tracked via IP & transaction trace,184492
+ACK-1930-05033,Rohini,Digital incident / transfer near Prashant Vihar Outer Ring Road,rioting,2026-08-26 17:18:00,Suspect tracked via IP & transaction trace,93133
+ACK-1930-05034,Shahdara,"Digital incident / transfer near ISBT Anand Vihar, Delhi Terminal",cheating_forgery,2026-07-16 14:21:00,Suspect tracked via IP & transaction trace,196785
+ACK-1930-05035,North,"Digital incident / transfer near Chandni Chowk main road, near Fountain",drug_trafficking,2026-09-24 09:08:00,Suspect tracked via IP & transaction trace,119014
+ACK-1930-05036,North West,"Digital incident / transfer near Ring Road, Netaji Subhash Place",illicit_storage,2026-09-21 02:33:00,Suspect tracked via IP & transaction trace,73431
+ACK-1930-05037,Central,"Digital incident / transfer near Desh Bandhu Gupta Road, Pahar Ganj",drug_trafficking,2026-05-24 23:42:00,Suspect tracked via IP & transaction trace,71778
+ACK-1930-05038,South West,Digital incident / transfer near Mahipalpur Bypass near NH-48,identity_theft,2026-05-23 16:27:00,Suspect tracked via IP & transaction trace,221977
+ACK-1930-05039,Rohini,"Digital incident / transfer near Sector 24, Deep Vihar, Rohini",rioting,2026-08-24 04:54:00,Suspect tracked via IP & transaction trace,211035
+ACK-1930-05040,Outer,Digital incident / transfer near Mundka Metro Station Depot,online_harassment,2026-09-23 07:39:00,Suspect tracked via IP & transaction trace,24453
+ACK-1930-05041,Shahdara,"Digital incident / transfer near Grand Trunk Road, Shahdara Chowk",illicit_storage,2026-06-25 10:49:00,Suspect tracked via IP & transaction trace,168833
+ACK-1930-05042,Gurugram East,"Digital incident / transfer near Galleria Market, DLF Phase 4",illicit_storage,2026-09-01 17:02:00,Suspect tracked via IP & transaction trace,177704
+ACK-1930-05043,North East,Digital incident / transfer near Brijpuri Main Road,drug_trafficking,2026-07-12 12:17:00,Suspect tracked via IP & transaction trace,164791
+ACK-1930-05044,Dwarka,"Digital incident / transfer near Sector 10 Main Market, Dwarka",identity_theft,2026-09-21 20:34:00,Suspect tracked via IP & transaction trace,108089
+ACK-1930-05045,Noida Central,Digital incident / transfer near Botanical Garden Metro Station interchange,financial_fraud,2026-05-03 15:35:00,Suspect tracked via IP & transaction trace,217095
+ACK-1930-05046,South West,Digital incident / transfer near Kapashera Border check post,illicit_storage,2026-06-26 02:28:00,Suspect tracked via IP & transaction trace,123056
+ACK-1930-05047,Noida Central,Digital incident / transfer near Sector 50 Central Market,online_harassment,2026-06-11 00:09:00,Suspect tracked via IP & transaction trace,20801
+ACK-1930-05048,Gurugram East,"Digital incident / transfer near Galleria Market, DLF Phase 4",illicit_storage,2026-06-16 12:43:00,Suspect tracked via IP & transaction trace,56579
+ACK-1930-05049,North East,"Digital incident / transfer near Seelampur Market, GT Road",drug_trafficking,2026-08-12 23:08:00,Suspect tracked via IP & transaction trace,142219
+ACK-1930-05050,South East,"Digital incident / transfer near Nehru Place Computer Market, Pragati Tower",financial_fraud,2026-05-17 21:04:00,Suspect tracked via IP & transaction trace,61829
+ACK-1930-05051,East,Digital incident / transfer near Laxmi Nagar Commercial Complex,rioting,2026-08-07 06:33:00,Suspect tracked via IP & transaction trace,164429
+ACK-1930-05052,Dwarka,Digital incident / transfer near Sector 21 Inter State Metro Terminal,rioting,2026-07-18 16:35:00,Suspect tracked via IP & transaction trace,39716
+ACK-1930-05053,Rohini,"Digital incident / transfer near Sector 16 Market, Rohini",financial_fraud,2026-07-17 22:14:00,Suspect tracked via IP & transaction trace,191589
+ACK-1930-05054,South East,"Digital incident / transfer near Central Market, Lajpat Nagar II",drug_trafficking,2026-09-21 00:49:00,Suspect tracked via IP & transaction trace,106676
+ACK-1930-05055,Faridabad NIT,Digital incident / transfer near Old Faridabad Railway Road,illicit_storage,2026-08-21 00:04:00,Suspect tracked via IP & transaction trace,188796
+ACK-1930-05056,Noida Central,"Digital incident / transfer near Sector 18 Atta Market, Commercial Hub",cheating_forgery,2026-08-22 04:05:00,Suspect tracked via IP & transaction trace,151503
+ACK-1930-05057,Dwarka,Digital incident / transfer near Sector 12 Metro Station Market,cheating_forgery,2026-05-23 15:08:00,Suspect tracked via IP & transaction trace,201651
+ACK-1930-05058,Outer,"Digital incident / transfer near Peeragarhi Chowk, Rohtak Road",rioting,2026-06-17 17:25:00,Suspect tracked via IP & transaction trace,161197
+ACK-1930-05059,South West,"Digital incident / transfer near Nelson Mandela Marg, Vasant Kunj",rioting,2026-06-11 18:55:00,Suspect tracked via IP & transaction trace,57499
+ACK-1930-05060,Dwarka,Digital incident / transfer near Sector 21 Inter State Metro Terminal,online_harassment,2026-07-02 04:54:00,Suspect tracked via IP & transaction trace,166543

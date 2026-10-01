@@ -1,0 +1,52 @@
+domain: "physical_harm"
+name: "Crimes Involving Physical Harm & Violence"
+governing_law: "Chapter VI of Bharatiya Nyaya Sanhita, 2023 (BNS) - Offences Affecting the Human Body (Sec 101 Murder, Sec 115 Hurt, Sec 106 Hit-and-Run, Sec 137 Kidnapping)"
+required_evidence: "Medical reports (MLC), blood samples, weapons recovered from spot, CCTV footage of assault, eyewitness testimony (under BSA 2023)"
+color: "#ef4444"
+geo_unit: "district"
+categories:
+  - "murder"
+  - "assault"
+  - "hit_and_run"
+  - "kidnapping"
+aggregation_window: "weekly"
+indicators:
+  - name: "incident_count"
+    type: "count"
+    unit: "incidents"
+    weight: 0.40
+    description: "Total volume of reported physical violence incidents"
+  - name: "category_severity"
+    type: "weighted_index"
+    unit: "severity_score"
+    weight: 0.40
+    description: "Severity index (Murder: 1.0, Kidnapping: 0.85, Assault: 0.75, Hit & Run: 0.70)"
+  - name: "verified_tip_density"
+    type: "rate"
+    unit: "per_sqkm"
+    weight: 0.20
+    description: "Concentration of verified public portal tips and Dial-112 validated intelligence"
+scoring_method:
+  method: "weighted_composite"
+  normalization: "min_max"
+  thresholds:
+    low: 0.25
+    medium: 0.55
+    high: 0.80
+report_template:
+  title: "Violent Crime & Physical Harm Threat Intelligence Report"
+  classification: "RESTRICTED / LAW ENFORCEMENT SENSITIVE"
+  aggregation_period: "weekly"
+  sections:
+    - id: "executive_summary"
+      name: "Tactical Situation Overview"
+      required: true
+    - id: "indicator_breakdown"
+      name: "Violent Crime Volume & Severity Index"
+      required: true
+    - id: "spatial_hotspots"
+      name: "High-Frequency Violence Hotspots & Patrol Corridors"
+      required: true
+    - id: "citizen_intelligence"
+      name: "Dial-112 & Citizen Portal Tips"
+      required: true

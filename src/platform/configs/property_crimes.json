@@ -1,0 +1,63 @@
+{
+  "domain": "property_crimes",
+  "name": "Crimes Against Property (Theft & Damage)",
+  "governing_law": "Chapter XVII of Bharatiya Nyaya Sanhita, 2023 (BNS) - Offences Against Property (Sec 303 Theft, Sec 304 Snatching, Sec 305 Burglary, Sec 324 Arson/Mischief)",
+  "required_evidence": "CCTV footage of break-in, broken locks/fingerprints, proof of ownership of stolen item (under BSA 2023)",
+  "color": "#f97316",
+  "geo_unit": "district",
+  "categories": [
+    "theft_burglary",
+    "robbery_snatching",
+    "vandalism_arson"
+  ],
+  "aggregation_window": "weekly",
+  "indicators": [
+    {
+      "name": "incident_count",
+      "type": "count",
+      "unit": "incidents",
+      "weight": 0.45,
+      "description": "Total property offence volume (theft, burglary, snatching)"
+    },
+    {
+      "name": "category_severity",
+      "type": "weighted_index",
+      "unit": "severity_score",
+      "weight": 0.35,
+      "description": "Severity index (Robbery/Snatching: 0.85, Arson: 0.85, Theft/Burglary: 0.60)"
+    },
+    {
+      "name": "verified_tip_density",
+      "type": "rate",
+      "unit": "per_sqkm",
+      "weight": 0.2,
+      "description": "Density of recovery intelligence and public tips"
+    }
+  ],
+  "scoring_method": {
+    "method": "weighted_composite",
+    "normalization": "min_max",
+    "thresholds": {
+      "low": 0.3,
+      "medium": 0.6,
+      "high": 0.85
+    }
+  },
+  "report_template": {
+    "title": "Property Offence & Anti-Snatching Tactical Report",
+    "classification": "RESTRICTED / LAW ENFORCEMENT SENSITIVE",
+    "aggregation_period": "weekly",
+    "sections": [
+      {
+        "id": "executive_summary",
+        "name": "Property Crime Trends & Anti-Snatching Directives",
+        "required": true
+      },
+      {
+        "id": "spatial_hotspots",
+        "name": "Active Theft Clusters & Motorcycle Patrol Zones",
+        "required": true
+      }
+    ]
+  }
+}

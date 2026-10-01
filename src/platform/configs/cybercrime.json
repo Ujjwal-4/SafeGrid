@@ -1,0 +1,63 @@
+{
+  "domain": "cybercrime",
+  "name": "Cybercrimes & Digital Scams",
+  "governing_law": "Information Technology (IT) Act, 2000 (Sec 66C Identity Theft, Sec 66D Cheating by Impersonation) & BNS Cheating/Fraud sections; Sec 63 BSA Electronic Evidence Certificate",
+  "required_evidence": "Screenshots of chats, transaction receipts, bank statements showing debit, IP addresses, emails, Section 63 BSA certificate",
+  "color": "#06b6d4",
+  "geo_unit": "district",
+  "categories": [
+    "financial_fraud",
+    "identity_theft",
+    "online_harassment"
+  ],
+  "aggregation_window": "weekly",
+  "indicators": [
+    {
+      "name": "incident_count",
+      "type": "count",
+      "unit": "incidents",
+      "weight": 0.4,
+      "description": "Total cybercrime registrations (Helpline 1930 & Portal)"
+    },
+    {
+      "name": "category_severity",
+      "type": "weighted_index",
+      "unit": "severity_score",
+      "weight": 0.4,
+      "description": "Severity index (Digital Arrest / Fraud > 50K: 0.90, Identity Theft: 0.75, Online Harassment: 0.70)"
+    },
+    {
+      "name": "verified_tip_density",
+      "type": "rate",
+      "unit": "per_sqkm",
+      "weight": 0.2,
+      "description": "Phishing nexus intelligence density"
+    }
+  ],
+  "scoring_method": {
+    "method": "weighted_composite",
+    "normalization": "min_max",
+    "thresholds": {
+      "low": 0.25,
+      "medium": 0.55,
+      "high": 0.8
+    }
+  },
+  "report_template": {
+    "title": "Cyber Threat & Digital Scam Intelligence Briefing",
+    "classification": "RESTRICTED / LAW ENFORCEMENT SENSITIVE",
+    "aggregation_period": "weekly",
+    "sections": [
+      {
+        "id": "executive_summary",
+        "name": "Cybercrime Financial Impact & Mule Account Nexus",
+        "required": true
+      },
+      {
+        "id": "spatial_hotspots",
+        "name": "Victim Concentration & SIM Box Operational Corridors",
+        "required": true
+      }
+    ]
+  }
+}

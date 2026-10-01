@@ -1,0 +1,290 @@
+[
+  [
+    "PCR-DL-080001",
+    "FIR-SOU-2026-1001",
+    "SDA Market, Opp IIT Gate",
+    "kidnapping",
+    "2026-05-13T21:08:00",
+    "2026-05-13T22:13:00"
+  ],
+  [
+    "PCR-DL-080006",
+    "FIR-GUR-2026-1006",
+    "Sikanderpur Metro Station Crossing",
+    "rioting",
+    "2026-09-09T10:08:00",
+    "2026-09-09T11:34:00"
+  ],
+  [
+    "PCR-DL-080011",
+    "FIR-OUT-2026-1011",
+    "Shahbad Dairy Block A",
+    "illicit_storage",
+    "2026-07-11T09:22:00",
+    "2026-07-11T10:35:00"
+  ],
+  [
+    "PCR-DL-080016",
+    "FIR-OUT-2026-1016",
+    "Bawana Industrial Area Sector 2",
+    "financial_fraud",
+    "2026-06-04T02:23:00",
+    "2026-06-04T03:37:00"
+  ],
+  [
+    "PCR-DL-080021",
+    "FIR-NOR-2026-1021",
+    "Ring Road, Netaji Subhash Place",
+    "theft_burglary",
+    "2026-05-23T03:55:00",
+    "2026-05-23T05:31:00"
+  ],
+  [
+    "PCR-DL-080026",
+    "FIR-ROH-2026-1026",
+    "Sector 7 Main Road, Rohini",
+    "child_abuse",
+    "2026-06-18T03:27:00",
+    "2026-06-18T04:00:00"
+  ],
+  [
+    "PCR-DL-080031",
+    "FIR-SOU-2026-1031",
+    "Press Enclave Road, Saket District Centre",
+    "murder",
+    "2026-06-23T09:29:00",
+    "2026-06-23T11:25:00"
+  ],
+  [
+    "PCR-DL-080036",
+    "FIR-NOR-2026-1036",
+    "Seelampur Market, GT Road",
+    "cheating_forgery",
+    "2026-08-02T15:32:00",
+    "2026-08-02T16:22:00"
+  ],
+  [
+    "PCR-DL-080041",
+    "FIR-NEW-2026-1041",
+    "Tolstoy Marg near KG Marg crossing",
+    "drug_trafficking",
+    "2026-09-06T09:07:00",
+    "2026-09-06T10:58:00"
+  ],
+  [
+    "PCR-DL-080046",
+    "FIR-SOU-2026-1046",
+    "Central Market, Lajpat Nagar II",
+    "identity_theft",
+    "2026-09-19T13:53:00",
+    "2026-09-19T15:09:00"
+  ],
+  [
+    "PCR-DL-080051",
+    "FIR-NOR-2026-1051",
+    "Old Delhi Railway Station, Platform 1 Exit",
+    "robbery_snatching",
+    "2026-07-18T08:02:00",
+    "2026-07-18T08:33:00"
+  ],
+  [
+    "PCR-DL-080056",
+    "FIR-DWA-2026-1056",
+    "Sector 10 Main Market, Dwarka",
+    "child_abuse",
+    "2026-07-07T10:18:00",
+    "2026-07-07T11:52:00"
+  ],
+  [
+    "PCR-DL-080061",
+    "FIR-CEN-2026-1061",
+    "GB Road near Ajmeri Gate",
+    "hit_and_run",
+    "2026-06-22T21:54:00",
+    "2026-06-22T23:01:00"
+  ],
+  [
+    "PCR-DL-080066",
+    "FIR-OUT-2026-1066",
+    "Shahbad Dairy Block A",
+    "cheating_forgery",
+    "2026-05-13T00:17:00",
+    "2026-05-13T01:34:00"
+  ],
+  [
+    "PCR-DL-080071",
+    "FIR-NOR-2026-1071",
+    "Near Azadpur Mandi Gate 4",
+    "drug_trafficking",
+    "2026-05-26T13:36:00",
+    "2026-05-26T15:12:00"
+  ],
+  [
+    "PCR-DL-080076",
+    "FIR-GUR-2026-1076",
+    "Galleria Market, DLF Phase 4",
+    "online_harassment",
+    "2026-07-13T17:30:00",
+    "2026-07-13T19:01:00"
+  ],
+  [
+    "PCR-DL-080081",
+    "FIR-NOR-2026-1081",
+    "Model Town Part 2, Main Market",
+    "robbery_snatching",
+    "2026-07-12T15:34:00",
+    "2026-07-12T17:33:00"
+  ],
+  [
+    "PCR-DL-080086",
+    "FIR-ROH-2026-1086",
+    "Rithala Metro Station Area",
+    "child_abuse",
+    "2026-08-22T20:23:00",
+    "2026-08-22T21:47:00"
+  ],
+  [
+    "PCR-DL-080091",
+    "FIR-CEN-2026-1091",
+    "Asaf Ali Road, Turkman Gate",
+    "hit_and_run",
+    "2026-07-03T14:38:00",
+    "2026-07-03T16:14:00"
+  ],
+  [
+    "PCR-DL-080096",
+    "FIR-OUT-2026-1096",
+    "Sultanpuri Block C Main Road",
+    "rioting",
+    "2026-05-13T15:16:00",
+    "2026-05-13T17:00:00"
+  ],
+  [
+    "PCR-DL-080101",
+    "FIR-WES-2026-1101",
+    "Mall Road, Tilak Nagar Metro Gate 2",
+    "illicit_storage",
+    "2026-05-06T09:10:00",
+    "2026-05-06T10:15:00"
+  ],
+  [
+    "PCR-DL-080106",
+    "FIR-NOR-2026-1106",
+    "Ring Road, Netaji Subhash Place",
+    "identity_theft",
+    "2026-09-19T16:18:00",
+    "2026-09-19T18:11:00"
+  ],
+  [
+    "PCR-DL-080111",
+    "FIR-NOR-2026-1111",
+    "Mukherjee Nagar Commercial Complex",
+    "robbery_snatching",
+    "2026-05-04T23:23:00",
+    "2026-05-05T00:12:00"
+  ],
+  [
+    "PCR-DL-080116",
+    "FIR-SOU-2026-1116",
+    "Nehru Place Computer Market, Pragati Tower",
+    "domestic_violence",
+    "2026-06-04T14:45:00",
+    "2026-06-04T16:25:00"
+  ],
+  [
+    "PCR-DL-080121",
+    "FIR-SHA-2026-1121",
+    "Grand Trunk Road, Shahdara Chowk",
+    "hit_and_run",
+    "2026-09-18T07:26:00",
+    "2026-09-18T08:44:00"
+  ],
+  [
+    "PCR-DL-080126",
+    "FIR-DWA-2026-1126",
+    "Bindapur Pocket 4 Main Road",
+    "cheating_forgery",
+    "2026-05-10T23:25:00",
+    "2026-05-11T00:43:00"
+  ],
+  [
+    "PCR-DL-080131",
+    "FIR-NOR-2026-1131",
+    "Karawal Nagar Chowk",
+    "illicit_storage",
+    "2026-08-03T18:27:00",
+    "2026-08-03T19:18:00"
+  ],
+  [
+    "PCR-DL-080136",
+    "FIR-SOU-2026-1136",
+    "Kapashera Border check post",
+    "online_harassment",
+    "2026-09-21T12:19:00",
+    "2026-09-21T13:33:00"
+  ],
+  [
+    "PCR-DL-080141",
+    "FIR-ROH-2026-1141",
+    "Sector 24, Deep Vihar, Rohini",
+    "theft_burglary",
+    "2026-05-11T02:43:00",
+    "2026-05-11T04:03:00"
+  ],
+  [
+    "PCR-DL-080146",
+    "FIR-DWA-2026-1146",
+    "Ramphal Chowk, Sector 7 Dwarka",
+    "child_abuse",
+    "2026-06-16T17:00:00",
+    "2026-06-16T18:11:00"
+  ],
+  [
+    "PCR-DL-080151",
+    "FIR-EAS-2026-1151",
+    "Laxmi Nagar Commercial Complex",
+    "murder",
+    "2026-07-27T01:31:00",
+    "2026-07-27T02:13:00"
+  ],
+  [
+    "PCR-DL-080156",
+    "FIR-GUR-2026-1156",
+    "Golf Course Road, Sector 54",
+    "rioting",
+    "2026-07-20T01:06:00",
+    "2026-07-20T01:46:00"
+  ],
+  [
+    "PCR-DL-080161",
+    "FIR-DWA-2026-1161",
+    "Sector 21 Inter State Metro Terminal",
+    "drug_trafficking",
+    "2026-06-27T05:59:00",
+    "2026-06-27T06:43:00"
+  ],
+  [
+    "PCR-DL-080166",
+    "FIR-NOI-2026-1166",
+    "Sector 18 Atta Market, Commercial Hub",
+    "online_harassment",
+    "2026-08-08T23:37:00",
+    "2026-08-09T00:35:00"
+  ],
+  [
+    "PCR-DL-080171",
+    "FIR-SOU-2026-1171",
+    "Press Enclave Road, Saket District Centre",
+    "robbery_snatching",
+    "2026-09-28T14:16:00",
+    "2026-09-28T15:44:00"
+  ],
+  [
+    "PCR-DL-080176",
+    "FIR-WES-2026-1176",
+    "Kirti Nagar Industrial Area, Phase 2",
+    "domestic_violence",
+    "2026-07-14T08:40:00",
+    "2026-07-14T09:46:00"
+  ]
+]

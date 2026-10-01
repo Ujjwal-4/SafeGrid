@@ -1,0 +1,62 @@
+{
+  "domain": "public_disturbance",
+  "name": "Public Disturbance & Scams (Economic/White Collar)",
+  "governing_law": "Chapter XI of Bharatiya Nyaya Sanhita, 2023 (BNS) - Public Tranquillity (Sec 189 Unlawful Assembly, Sec 191 Rioting); Chapter XVII BNS (Sec 318 Cheating, Sec 336 Forgery)",
+  "required_evidence": "Video recordings of mob violence, original forged documents compared against authentic signatures via forensic handwriting experts",
+  "color": "#eab308",
+  "geo_unit": "district",
+  "categories": [
+    "rioting",
+    "cheating_forgery"
+  ],
+  "aggregation_window": "weekly",
+  "indicators": [
+    {
+      "name": "incident_count",
+      "type": "count",
+      "unit": "incidents",
+      "weight": 0.4,
+      "description": "Public order incidents and economic fraud complaints"
+    },
+    {
+      "name": "category_severity",
+      "type": "weighted_index",
+      "unit": "severity_score",
+      "weight": 0.4,
+      "description": "Severity score (Rioting: 0.90, Large-scale Forgery: 0.75, Public Fights: 0.60)"
+    },
+    {
+      "name": "verified_tip_density",
+      "type": "rate",
+      "unit": "per_sqkm",
+      "weight": 0.2,
+      "description": "Verified community tip frequency"
+    }
+  ],
+  "scoring_method": {
+    "method": "weighted_composite",
+    "normalization": "min_max",
+    "thresholds": {
+      "low": 0.25,
+      "medium": 0.55,
+      "high": 0.8
+    }
+  },
+  "report_template": {
+    "title": "Public Order & Economic Crime Intelligence Bulletin",
+    "classification": "RESTRICTED / LAW ENFORCEMENT SENSITIVE",
+    "aggregation_period": "weekly",
+    "sections": [
+      {
+        "id": "executive_summary",
+        "name": "Law and Order Assessment & Public Tranquillity",
+        "required": true
+      },
+      {
+        "id": "spatial_hotspots",
+        "name": "Sensitive Corridors & Mobilization Hotspots",
+        "required": true
+      }
+    ]
+  }
+}

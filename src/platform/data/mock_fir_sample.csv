@@ -1,0 +1,184 @@
+FIR_No,District_Name,Police_Station,Crime_Head,Incident_Address,Registration_Timestamp,Seizure_Qty_Kg,Investigating_Officer
+FIR-SOU-2026-1001,South,Mehrauli,kidnapping,"SDA Market, Opp IIT Gate",2026-05-13 22:13:00,0.0,SI Yadav
+FIR-DWA-2026-1002,Dwarka,Dwarka North,child_abuse,"Sector 10 Main Market, Dwarka",2026-08-28 16:40:00,0.0,SI Khan
+FIR-SOU-2026-1003,South West,Palam Village,vandalism_arson,Mahipalpur Bypass near NH-48,2026-06-03 10:07:00,0.0,SI Yadav
+FIR-WES-2026-1004,West,Janakpuri,financial_fraud,"District Centre, Janakpuri",2026-09-16 22:58:00,0.0,SI Singh
+FIR-OUT-2026-1005,Outer,Nangloi,illicit_storage,"Rohtak Road, Nangloi Chowk",2026-08-14 15:10:00,1.45,SI Sharma
+FIR-GUR-2026-1006,Gurugram East,DLF Phase 1,rioting,Sikanderpur Metro Station Crossing,2026-09-09 11:34:00,0.0,SI Sharma
+FIR-OUT-2026-1007,Outer North,Narela,assault,Holambi Kalan Railway Crossing,2026-05-10 14:16:00,0.0,SI Khan
+FIR-SOU-2026-1008,South,Saket,child_abuse,"Hauz Khas Village, Near Tank",2026-09-12 08:38:00,0.0,SI Singh
+FIR-OUT-2026-1009,Outer North,Narela,vandalism_arson,Samaypur Badli Metro Station,2026-06-05 07:09:00,0.0,SI Khan
+FIR-OUT-2026-1010,Outer North,Shahbad Dairy,financial_fraud,Shahbad Dairy Block A,2026-05-21 12:32:00,0.0,SI Meena
+FIR-OUT-2026-1011,Outer North,Bawana,illicit_storage,Shahbad Dairy Block A,2026-07-11 10:35:00,7.15,SI Das
+FIR-CEN-2026-1012,Central,Paharganj,cheating_forgery,GB Road near Ajmeri Gate,2026-05-01 05:28:00,0.0,SI Das
+FIR-NOR-2026-1013,North,Civil Lines,murder,"Mall Road, Civil Lines",2026-06-12 01:25:00,0.0,SI Meena
+FIR-NEW-2026-1014,New Delhi,Parliament Street,sexual_offenses,"Block B, Inner Circle, Connaught Place",2026-06-23 15:04:00,0.0,SI Yadav
+FIR-WES-2026-1015,West,Janakpuri,vandalism_arson,"Club Road Market, Punjabi Bagh",2026-06-22 02:33:00,0.0,SI Sharma
+FIR-OUT-2026-1016,Outer North,Shahbad Dairy,financial_fraud,Bawana Industrial Area Sector 2,2026-06-04 03:37:00,0.0,SI Patel
+FIR-SHA-2026-1017,Shahdara,Shahdara,illicit_storage,Jhilmil Industrial Area,2026-09-07 19:32:00,2.67,SI Patel
+FIR-GUR-2026-1018,Gurugram East,DLF Phase 1,rioting,Sikanderpur Metro Station Crossing,2026-07-12 04:24:00,0.0,SI Patel
+FIR-NEW-2026-1019,New Delhi,Parliament Street,murder,"Near Shivaji Stadium Metro, New Delhi",2026-08-02 16:18:00,0.0,SI Patel
+FIR-NOR-2026-1020,North,Civil Lines,sexual_offenses,Kashmere Gate Ring Road Flyover,2026-06-24 01:15:00,0.0,SI Verma
+FIR-NOR-2026-1021,North West,Model Town,theft_burglary,"Ring Road, Netaji Subhash Place",2026-05-23 05:31:00,0.0,SI Khan
+FIR-SOU-2026-1022,South West,Palam Village,online_harassment,"Sadhu Vaswani Marg, Delhi Cantt",2026-07-25 23:56:00,0.0,SI Verma
+FIR-SOU-2026-1023,South West,Palam Village,illicit_storage,"Sadhu Vaswani Marg, Delhi Cantt",2026-05-25 18:43:00,8.81,SI Yadav
+FIR-OUT-2026-1024,Outer,Mangolpuri,rioting,Mangolpuri Industrial Area Phase 1,2026-08-18 07:20:00,0.0,SI Yadav
+FIR-SOU-2026-1025,South West,Delhi Cantt,murder,Mahipalpur Bypass near NH-48,2026-05-13 14:55:00,0.0,SI Meena
+FIR-ROH-2026-1026,Rohini,Begumpur,child_abuse,"Sector 7 Main Road, Rohini",2026-06-18 04:00:00,0.0,SI Patel
+FIR-ROH-2026-1027,Rohini,Rohini North,theft_burglary,Prashant Vihar Outer Ring Road,2026-08-25 23:46:00,0.0,SI Meena
+FIR-NOR-2026-1028,North,Kotwali,online_harassment,"ISBT Kashmere Gate, Departure Block",2026-07-14 14:47:00,0.0,SI Verma
+FIR-NOR-2026-1029,North East,Bhajanpura,illicit_storage,Karawal Nagar Chowk,2026-08-11 08:14:00,1.36,SI Yadav
+FIR-NOR-2026-1030,North East,Bhajanpura,cheating_forgery,"Seelampur Market, GT Road",2026-06-25 14:19:00,0.0,SI Das
+FIR-SOU-2026-1031,South,Malviya Nagar,murder,"Press Enclave Road, Saket District Centre",2026-06-23 11:25:00,0.0,SI Sharma
+FIR-DWA-2026-1032,Dwarka,Dwarka North,domestic_violence,Sector 12 Metro Station Market,2026-05-01 07:08:00,0.0,SI Yadav
+FIR-SOU-2026-1033,South,Mehrauli,theft_burglary,"Press Enclave Road, Saket District Centre",2026-07-28 03:02:00,0.0,SI Das
+FIR-SOU-2026-1034,South West,Palam Village,financial_fraud,"Sadhu Vaswani Marg, Delhi Cantt",2026-07-09 14:56:00,0.0,SI Singh
+FIR-OUT-2026-1035,Outer North,Bawana,drug_trafficking,Holambi Kalan Railway Crossing,2026-09-21 00:24:00,9.49,SI Khan
+FIR-NOR-2026-1036,North East,Jafrabad,cheating_forgery,"Seelampur Market, GT Road",2026-08-02 16:22:00,0.0,SI Yadav
+FIR-SOU-2026-1037,South East,Govindpuri,murder,Okhla Industrial Area Phase 3,2026-06-25 18:54:00,0.0,SI Patel
+FIR-SOU-2026-1038,South,Mehrauli,sexual_offenses,"SDA Market, Opp IIT Gate",2026-08-06 01:05:00,0.0,SI Sharma
+FIR-WES-2026-1039,West,Tilak Nagar,theft_burglary,"Kirti Nagar Industrial Area, Phase 2",2026-07-26 01:01:00,0.0,SI Singh
+FIR-NOR-2026-1040,North West,Adarsh Nagar,identity_theft,Near Azadpur Mandi Gate 4,2026-06-05 23:27:00,0.0,SI Das
+FIR-NEW-2026-1041,New Delhi,Barakhamba Road,drug_trafficking,Tolstoy Marg near KG Marg crossing,2026-09-06 10:58:00,9.8,SI Yadav
+FIR-GUR-2026-1042,Gurugram East,Cyber City,rioting,MG Road Metro Station area,2026-07-08 10:10:00,0.0,SI Verma
+FIR-EAS-2026-1043,East,Preet Vihar,murder,Laxmi Nagar Commercial Complex,2026-08-02 14:46:00,0.0,SI Patel
+FIR-DWA-2026-1044,Dwarka,Dwarka North,sexual_offenses,"Sector 6 Central Market, Dwarka",2026-07-01 08:06:00,0.0,SI Verma
+FIR-GUR-2026-1045,Gurugram East,DLF Phase 1,vandalism_arson,"Golf Course Road, Sector 54",2026-09-06 13:10:00,0.0,SI Sharma
+FIR-SOU-2026-1046,South East,Lajpat Nagar,identity_theft,"Central Market, Lajpat Nagar II",2026-09-19 15:09:00,0.0,SI Sharma
+FIR-NOR-2026-1047,North West,Model Town,drug_trafficking,"Deep Market, Ashok Vihar Phase 2",2026-07-21 02:30:00,10.2,SI Meena
+FIR-SOU-2026-1048,South West,Palam Village,cheating_forgery,Najafgarh Main Bus Stand,2026-08-06 01:16:00,0.0,SI Das
+FIR-NOR-2026-1049,North,Civil Lines,kidnapping,"Old Delhi Railway Station, Platform 1 Exit",2026-09-25 07:35:00,0.0,SI Sharma
+FIR-DWA-2026-1050,Dwarka,Dwarka South,domestic_violence,Sector 12 Metro Station Market,2026-06-26 04:02:00,0.0,SI Patel
+FIR-NOR-2026-1051,North,Timarpur,robbery_snatching,"Old Delhi Railway Station, Platform 1 Exit",2026-07-18 08:33:00,0.0,SI Das
+FIR-NOI-2026-1052,Noida Central,Sector 24,identity_theft,"Sector 18 Atta Market, Commercial Hub",2026-06-05 18:37:00,0.0,SI Verma
+FIR-SOU-2026-1053,South West,Palam Village,drug_trafficking,Najafgarh Main Bus Stand,2026-09-20 21:44:00,5.12,SI Patel
+FIR-SHA-2026-1054,Shahdara,Anand Vihar,cheating_forgery,"ISBT Anand Vihar, Delhi Terminal",2026-05-28 07:08:00,0.0,SI Meena
+FIR-OUT-2026-1055,Outer North,Shahbad Dairy,hit_and_run,"GT Karnal Road, Singhu Border",2026-05-27 16:50:00,0.0,SI Singh
+FIR-DWA-2026-1056,Dwarka,Dwarka North,child_abuse,"Sector 10 Main Market, Dwarka",2026-07-07 11:52:00,0.0,SI Das
+FIR-NEW-2026-1057,New Delhi,Chanakyapuri,robbery_snatching,"Shanti Path, Chanakyapuri",2026-08-20 05:55:00,0.0,SI Das
+FIR-NEW-2026-1058,New Delhi,Barakhamba Road,financial_fraud,"Block B, Inner Circle, Connaught Place",2026-09-28 06:54:00,0.0,SI Yadav
+FIR-SHA-2026-1059,Shahdara,Anand Vihar,illicit_storage,Dilshad Garden Pocket B,2026-07-28 14:16:00,3.01,SI Meena
+FIR-FAR-2026-1060,Faridabad NIT,Old Faridabad,rioting,"Neelam Chowk, Bata Road",2026-05-16 10:17:00,0.0,SI Khan
+FIR-CEN-2026-1061,Central,Kamla Market,hit_and_run,GB Road near Ajmeri Gate,2026-06-22 23:01:00,0.0,SI Das
+FIR-SOU-2026-1062,South East,Badarpur,sexual_offenses,"Nehru Place Computer Market, Pragati Tower",2026-07-17 05:53:00,0.0,SI Singh
+FIR-NOR-2026-1063,North,Kashmere Gate,theft_burglary,"Mall Road, Civil Lines",2026-07-24 13:50:00,0.0,SI Khan
+FIR-NOR-2026-1064,North,Timarpur,online_harassment,"ISBT Kashmere Gate, Departure Block",2026-08-04 16:19:00,0.0,SI Patel
+FIR-SOU-2026-1065,South West,Palam Village,drug_trafficking,Kapashera Border check post,2026-08-01 08:13:00,9.25,SI Singh
+FIR-OUT-2026-1066,Outer North,Shahbad Dairy,cheating_forgery,Shahbad Dairy Block A,2026-05-13 01:34:00,0.0,SI Yadav
+FIR-NOI-2026-1067,Noida Central,Sector 39,murder,"Sector 18 Atta Market, Commercial Hub",2026-06-21 07:44:00,0.0,SI Khan
+FIR-WES-2026-1068,West,Tilak Nagar,sexual_offenses,"District Centre, Janakpuri",2026-06-25 05:58:00,0.0,SI Patel
+FIR-NOI-2026-1069,Noida Central,Sector 39,robbery_snatching,"Sector 18 Atta Market, Commercial Hub",2026-05-23 12:56:00,0.0,SI Meena
+FIR-NOR-2026-1070,North West,Mukherjee Nagar,identity_theft,"Shalimar Bagh, AA Block Market",2026-09-04 08:30:00,0.0,SI Singh
+FIR-NOR-2026-1071,North West,Model Town,drug_trafficking,Near Azadpur Mandi Gate 4,2026-05-26 15:12:00,7.5,SI Meena
+FIR-OUT-2026-1072,Outer North,Samaypur Badli,rioting,Bawana Industrial Area Sector 2,2026-08-18 06:44:00,0.0,SI Das
+FIR-WES-2026-1073,West,Rajouri Garden,murder,"Subhash Nagar Market, Block 6",2026-05-24 08:41:00,0.0,SI Yadav
+FIR-CEN-2026-1074,Central,Paharganj,child_abuse,"Ajmal Khan Road, Karol Bagh Market",2026-06-21 10:22:00,0.0,SI Das
+FIR-OUT-2026-1075,Outer,Nangloi,robbery_snatching,Sultanpuri Block C Main Road,2026-08-23 13:41:00,0.0,SI Singh
+FIR-GUR-2026-1076,Gurugram East,MG Road,online_harassment,"Galleria Market, DLF Phase 4",2026-07-13 19:01:00,0.0,SI Singh
+FIR-NOI-2026-1077,Noida Central,Sector 39,illicit_storage,Sector 59 Metro Station area,2026-09-17 22:44:00,7.61,SI Patel
+FIR-NEW-2026-1078,New Delhi,Chanakyapuri,cheating_forgery,Tolstoy Marg near KG Marg crossing,2026-08-28 05:04:00,0.0,SI Das
+FIR-OUT-2026-1079,Outer,Mangolpuri,kidnapping,"Outer Ring Road, Paschim Vihar West",2026-09-15 14:05:00,0.0,SI Das
+FIR-SHA-2026-1080,Shahdara,Vivek Vihar,child_abuse,Jhilmil Industrial Area,2026-07-15 11:52:00,0.0,SI Sharma
+FIR-NOR-2026-1081,North West,Ashok Vihar,robbery_snatching,"Model Town Part 2, Main Market",2026-07-12 17:33:00,0.0,SI Khan
+FIR-SOU-2026-1082,South West,Najafgarh,online_harassment,"Sadhu Vaswani Marg, Delhi Cantt",2026-08-24 03:16:00,0.0,SI Yadav
+FIR-DWA-2026-1083,Dwarka,Bindapur,drug_trafficking,Bindapur Pocket 4 Main Road,2026-05-16 16:47:00,1.06,SI Patel
+FIR-NOR-2026-1084,North West,Mukherjee Nagar,cheating_forgery,"Ring Road, Netaji Subhash Place",2026-08-17 13:38:00,0.0,SI Yadav
+FIR-NOI-2026-1085,Noida Central,Sector 58,hit_and_run,Sector 59 Metro Station area,2026-09-23 20:13:00,0.0,SI Yadav
+FIR-ROH-2026-1086,Rohini,Begumpur,child_abuse,Rithala Metro Station Area,2026-08-22 21:47:00,0.0,SI Meena
+FIR-NOR-2026-1087,North West,Model Town,theft_burglary,"Shalimar Bagh, AA Block Market",2026-05-02 06:17:00,0.0,SI Singh
+FIR-ROH-2026-1088,Rohini,Begumpur,online_harassment,"Sector 3 Market, Rohini",2026-09-28 07:47:00,0.0,SI Patel
+FIR-DWA-2026-1089,Dwarka,Dwarka South,illicit_storage,Bindapur Pocket 4 Main Road,2026-09-25 17:47:00,7.44,SI Yadav
+FIR-OUT-2026-1090,Outer,Paschim Vihar,cheating_forgery,"Rohtak Road, Nangloi Chowk",2026-07-18 04:10:00,0.0,SI Meena
+FIR-CEN-2026-1091,Central,Daryaganj,hit_and_run,"Asaf Ali Road, Turkman Gate",2026-07-03 16:14:00,0.0,SI Singh
+FIR-SOU-2026-1092,South East,Kalkaji,sexual_offenses,"Nehru Place Computer Market, Pragati Tower",2026-07-11 09:13:00,0.0,SI Das
+FIR-SOU-2026-1093,South East,Lajpat Nagar,robbery_snatching,"Nehru Place Computer Market, Pragati Tower",2026-05-13 12:16:00,0.0,SI Meena
+FIR-NOR-2026-1094,North East,Seelampur,financial_fraud,"Seelampur Market, GT Road",2026-09-25 17:00:00,0.0,SI Verma
+FIR-NOR-2026-1095,North,Kashmere Gate,illicit_storage,"Chandni Chowk main road, near Fountain",2026-07-23 01:05:00,1.34,SI Singh
+FIR-OUT-2026-1096,Outer,Nangloi,rioting,Sultanpuri Block C Main Road,2026-05-13 17:00:00,0.0,SI Verma
+FIR-ROH-2026-1097,Rohini,Rohini North,hit_and_run,Prashant Vihar Outer Ring Road,2026-05-20 09:48:00,0.0,SI Das
+FIR-ROH-2026-1098,Rohini,Rohini North,child_abuse,Rithala Metro Station Area,2026-05-05 01:00:00,0.0,SI Patel
+FIR-OUT-2026-1099,Outer North,Bawana,theft_burglary,Bawana Industrial Area Sector 2,2026-09-08 08:12:00,0.0,SI Verma
+FIR-SHA-2026-1100,Shahdara,Shahdara,financial_fraud,"ISBT Anand Vihar, Delhi Terminal",2026-09-07 15:21:00,0.0,SI Khan
+FIR-WES-2026-1101,West,Tilak Nagar,illicit_storage,"Mall Road, Tilak Nagar Metro Gate 2",2026-05-06 10:15:00,9.54,SI Patel
+FIR-NOR-2026-1102,North East,Bhajanpura,cheating_forgery,Khajuri Khas Chowk,2026-07-12 15:35:00,0.0,SI Verma
+FIR-NOR-2026-1103,North,Kotwali,murder,"Chandni Chowk main road, near Fountain",2026-09-27 18:25:00,0.0,SI Yadav
+FIR-ROH-2026-1104,Rohini,Rohini North,domestic_violence,"Sector 24, Deep Vihar, Rohini",2026-09-28 21:10:00,0.0,SI Singh
+FIR-CEN-2026-1105,Central,Karol Bagh,theft_burglary,"Asaf Ali Road, Turkman Gate",2026-07-03 11:14:00,0.0,SI Sharma
+FIR-NOR-2026-1106,North West,Adarsh Nagar,identity_theft,"Ring Road, Netaji Subhash Place",2026-09-19 18:11:00,0.0,SI Patel
+FIR-NOI-2026-1107,Noida Central,Sector 24,illicit_storage,Sector 50 Central Market,2026-08-16 19:00:00,6.27,SI Singh
+FIR-ROH-2026-1108,Rohini,Rohini North,rioting,"Sector 24, Deep Vihar, Rohini",2026-07-14 23:07:00,0.0,SI Das
+FIR-CEN-2026-1109,Central,Karol Bagh,assault,"Desh Bandhu Gupta Road, Pahar Ganj",2026-09-05 01:57:00,0.0,SI Singh
+FIR-DWA-2026-1110,Dwarka,Bindapur,domestic_violence,Sector 21 Inter State Metro Terminal,2026-08-08 19:09:00,0.0,SI Singh
+FIR-NOR-2026-1111,North,Kashmere Gate,robbery_snatching,Mukherjee Nagar Commercial Complex,2026-05-05 00:12:00,0.0,SI Patel
+FIR-SOU-2026-1112,South West,Najafgarh,online_harassment,Mahipalpur Bypass near NH-48,2026-09-02 16:48:00,0.0,SI Verma
+FIR-OUT-2026-1113,Outer,Sultanpuri,drug_trafficking,"Peeragarhi Chowk, Rohtak Road",2026-06-14 08:30:00,9.31,SI Verma
+FIR-NOI-2026-1114,Noida Central,Sector 20,rioting,Sector 38A near GIP Mall,2026-06-13 22:51:00,0.0,SI Khan
+FIR-ROH-2026-1115,Rohini,Prashant Vihar,kidnapping,"Sector 24, Deep Vihar, Rohini",2026-06-25 13:35:00,0.0,SI Das
+FIR-SOU-2026-1116,South East,Badarpur,domestic_violence,"Nehru Place Computer Market, Pragati Tower",2026-06-04 16:25:00,0.0,SI Khan
+FIR-SOU-2026-1117,South West,Najafgarh,theft_burglary,Kapashera Border check post,2026-05-26 04:30:00,0.0,SI Patel
+FIR-OUT-2026-1118,Outer,Sultanpuri,online_harassment,Mundka Metro Station Depot,2026-06-02 20:31:00,0.0,SI Das
+FIR-ROH-2026-1119,Rohini,Rohini South,drug_trafficking,"Sector 24, Deep Vihar, Rohini",2026-05-06 08:49:00,5.09,SI Patel
+FIR-FAR-2026-1120,Faridabad NIT,Old Faridabad,cheating_forgery,"Neelam Chowk, Bata Road",2026-09-08 06:29:00,0.0,SI Patel
+FIR-SHA-2026-1121,Shahdara,Anand Vihar,hit_and_run,"Grand Trunk Road, Shahdara Chowk",2026-09-18 08:44:00,0.0,SI Das
+FIR-NEW-2026-1122,New Delhi,Barakhamba Road,sexual_offenses,"Block B, Inner Circle, Connaught Place",2026-08-03 20:50:00,0.0,SI Yadav
+FIR-SOU-2026-1123,South East,Govindpuri,robbery_snatching,"Central Market, Lajpat Nagar II",2026-07-22 02:35:00,0.0,SI Singh
+FIR-GUR-2026-1124,Gurugram East,Cyber City,online_harassment,"Galleria Market, DLF Phase 4",2026-07-08 06:14:00,0.0,SI Yadav
+FIR-NOR-2026-1125,North East,Bhajanpura,illicit_storage,Brijpuri Main Road,2026-06-16 16:17:00,5.08,SI Singh
+FIR-DWA-2026-1126,Dwarka,Dwarka North,cheating_forgery,Bindapur Pocket 4 Main Road,2026-05-11 00:43:00,0.0,SI Yadav
+FIR-NOR-2026-1127,North East,Khajuri Khas,hit_and_run,Brijpuri Main Road,2026-09-06 08:15:00,0.0,SI Meena
+FIR-WES-2026-1128,West,Punjabi Bagh,child_abuse,"Main Ring Road, Rajouri Garden",2026-06-09 17:27:00,0.0,SI Patel
+FIR-WES-2026-1129,West,Tilak Nagar,robbery_snatching,"District Centre, Janakpuri",2026-09-09 18:03:00,0.0,SI Patel
+FIR-DWA-2026-1130,Dwarka,Sector 23 Dwarka,identity_theft,"Sector 10 Main Market, Dwarka",2026-09-12 17:59:00,0.0,SI Meena
+FIR-NOR-2026-1131,North East,Bhajanpura,illicit_storage,Karawal Nagar Chowk,2026-08-03 19:18:00,5.83,SI Singh
+FIR-OUT-2026-1132,Outer North,Shahbad Dairy,rioting,"Narela Anaj Mandi, Main Gate",2026-07-06 07:20:00,0.0,SI Khan
+FIR-NOI-2026-1133,Noida Central,Sector 24,assault,Botanical Garden Metro Station interchange,2026-05-06 04:46:00,0.0,SI Yadav
+FIR-OUT-2026-1134,Outer,Paschim Vihar,sexual_offenses,"Outer Ring Road, Paschim Vihar West",2026-06-20 02:41:00,0.0,SI Patel
+FIR-NOI-2026-1135,Noida Central,Sector 39,theft_burglary,"Sector 18 Atta Market, Commercial Hub",2026-07-22 10:55:00,0.0,SI Das
+FIR-SOU-2026-1136,South West,Najafgarh,online_harassment,Kapashera Border check post,2026-09-21 13:33:00,0.0,SI Meena
+FIR-EAS-2026-1137,East,Mayur Vihar,drug_trafficking,"Kalyanpuri Block 12, Main Road",2026-09-01 04:22:00,3.8,SI Sharma
+FIR-NEW-2026-1138,New Delhi,Parliament Street,cheating_forgery,"Near Shivaji Stadium Metro, New Delhi",2026-08-18 12:15:00,0.0,SI Singh
+FIR-NOI-2026-1139,Noida Central,Sector 58,hit_and_run,Sector 50 Central Market,2026-06-14 02:11:00,0.0,SI Singh
+FIR-SOU-2026-1140,South West,Vasant Kunj,sexual_offenses,"Palam Colony, Main Palam-Dabri Road",2026-08-05 23:00:00,0.0,SI Yadav
+FIR-ROH-2026-1141,Rohini,Begumpur,theft_burglary,"Sector 24, Deep Vihar, Rohini",2026-05-11 04:03:00,0.0,SI Meena
+FIR-GUR-2026-1142,Gurugram East,Cyber City,identity_theft,"Galleria Market, DLF Phase 4",2026-08-27 00:07:00,0.0,SI Yadav
+FIR-CEN-2026-1143,Central,Paharganj,illicit_storage,"Ansari Road, Daryaganj",2026-07-21 06:23:00,10.71,SI Yadav
+FIR-NOR-2026-1144,North West,Mukherjee Nagar,rioting,"Deep Market, Ashok Vihar Phase 2",2026-09-02 22:30:00,0.0,SI Singh
+FIR-NOR-2026-1145,North East,Seelampur,hit_and_run,"Seelampur Market, GT Road",2026-06-21 22:34:00,0.0,SI Verma
+FIR-DWA-2026-1146,Dwarka,Sector 23 Dwarka,child_abuse,"Ramphal Chowk, Sector 7 Dwarka",2026-06-16 18:11:00,0.0,SI Khan
+FIR-FAR-2026-1147,Faridabad NIT,NIT 5,vandalism_arson,"NIT 1 Main Market, BK Chowk",2026-08-05 09:52:00,0.0,SI Meena
+FIR-SOU-2026-1148,South East,Govindpuri,financial_fraud,"Nehru Place Computer Market, Pragati Tower",2026-09-22 12:12:00,0.0,SI Das
+FIR-CEN-2026-1149,Central,Karol Bagh,illicit_storage,"Main Bazar, Paharganj, Near New Delhi Railway Station",2026-05-07 01:36:00,7.88,SI Patel
+FIR-NOR-2026-1150,North,Kotwali,cheating_forgery,"ISBT Kashmere Gate, Departure Block",2026-05-27 14:51:00,0.0,SI Sharma
+FIR-EAS-2026-1151,East,Preet Vihar,murder,Laxmi Nagar Commercial Complex,2026-07-27 02:13:00,0.0,SI Verma
+FIR-SOU-2026-1152,South West,Najafgarh,domestic_violence,Kapashera Border check post,2026-09-25 11:43:00,0.0,SI Das
+FIR-SOU-2026-1153,South West,Najafgarh,robbery_snatching,"Palam Colony, Main Palam-Dabri Road",2026-07-18 11:26:00,0.0,SI Patel
+FIR-DWA-2026-1154,Dwarka,Bindapur,financial_fraud,Sector 21 Inter State Metro Terminal,2026-05-24 09:38:00,0.0,SI Sharma
+FIR-CEN-2026-1155,Central,Kamla Market,drug_trafficking,"Ansari Road, Daryaganj",2026-07-05 11:56:00,7.19,SI Yadav
+FIR-GUR-2026-1156,Gurugram East,Cyber City,rioting,"Golf Course Road, Sector 54",2026-07-20 01:46:00,0.0,SI Patel
+FIR-ROH-2026-1157,Rohini,Begumpur,murder,"Sector 16 Market, Rohini",2026-06-28 23:41:00,0.0,SI Sharma
+FIR-OUT-2026-1158,Outer,Nangloi,child_abuse,"Peeragarhi Chowk, Rohtak Road",2026-05-17 07:27:00,0.0,SI Meena
+FIR-OUT-2026-1159,Outer,Sultanpuri,robbery_snatching,"Outer Ring Road, Paschim Vihar West",2026-08-17 22:08:00,0.0,SI Singh
+FIR-SOU-2026-1160,South East,Kalkaji,identity_theft,"Central Market, Lajpat Nagar II",2026-08-25 10:43:00,0.0,SI Verma
+FIR-DWA-2026-1161,Dwarka,Dwarka South,drug_trafficking,Sector 21 Inter State Metro Terminal,2026-06-27 06:43:00,4.8,SI Verma
+FIR-WES-2026-1162,West,Tilak Nagar,cheating_forgery,"Main Ring Road, Rajouri Garden",2026-05-23 09:28:00,0.0,SI Das
+FIR-FAR-2026-1163,Faridabad NIT,Ballabgarh,assault,Old Faridabad Railway Road,2026-05-23 12:37:00,0.0,SI Sharma
+FIR-ROH-2026-1164,Rohini,Rohini North,sexual_offenses,"Sector 3 Market, Rohini",2026-08-28 07:24:00,0.0,SI Verma
+FIR-FAR-2026-1165,Faridabad NIT,NIT 1,theft_burglary,"NIT 1 Main Market, BK Chowk",2026-07-17 10:31:00,0.0,SI Patel
+FIR-NOI-2026-1166,Noida Central,Sector 58,online_harassment,"Sector 18 Atta Market, Commercial Hub",2026-08-09 00:35:00,0.0,SI Meena
+FIR-SOU-2026-1167,South East,Badarpur,drug_trafficking,"Kalkaji Main Market, D Block",2026-07-14 19:21:00,5.67,SI Singh
+FIR-OUT-2026-1168,Outer North,Bawana,rioting,Holambi Kalan Railway Crossing,2026-05-11 17:34:00,0.0,SI Verma
+FIR-DWA-2026-1169,Dwarka,Sector 23 Dwarka,assault,Sector 12 Metro Station Market,2026-06-04 05:01:00,0.0,SI Meena
+FIR-ROH-2026-1170,Rohini,Rohini South,sexual_offenses,"Sector 16 Market, Rohini",2026-06-16 05:12:00,0.0,SI Yadav
+FIR-SOU-2026-1171,South,Hauz Khas,robbery_snatching,"Press Enclave Road, Saket District Centre",2026-09-28 15:44:00,0.0,SI Khan
+FIR-OUT-2026-1172,Outer,Paschim Vihar,online_harassment,"Peeragarhi Chowk, Rohtak Road",2026-08-27 23:20:00,0.0,SI Patel
+FIR-OUT-2026-1173,Outer,Paschim Vihar,illicit_storage,Mangolpuri Industrial Area Phase 1,2026-08-15 09:49:00,10.02,SI Das
+FIR-NOR-2026-1174,North,Kotwali,rioting,"ISBT Kashmere Gate, Departure Block",2026-08-13 10:28:00,0.0,SI Sharma
+FIR-SOU-2026-1175,South West,Vasant Kunj,murder,"Nelson Mandela Marg, Vasant Kunj",2026-08-23 20:23:00,0.0,SI Verma
+FIR-WES-2026-1176,West,Punjabi Bagh,domestic_violence,"Kirti Nagar Industrial Area, Phase 2",2026-07-14 09:46:00,0.0,SI Das
+FIR-NOR-2026-1177,North West,Ashok Vihar,theft_burglary,"Deep Market, Ashok Vihar Phase 2",2026-07-20 00:29:00,0.0,SI Das
+FIR-DWA-2026-1178,Dwarka,Bindapur,financial_fraud,Sector 21 Inter State Metro Terminal,2026-09-20 00:15:00,0.0,SI Meena
+FIR-SHA-2026-1179,Shahdara,Anand Vihar,drug_trafficking,"Grand Trunk Road, Shahdara Chowk",2026-08-04 05:10:00,8.23,SI Singh
+FIR-OUT-2026-1180,Outer,Paschim Vihar,rioting,"Rohtak Road, Nangloi Chowk",2026-08-10 04:07:00,0.0,SI Meena
+FIR-MAL-2026-9001,Central,Paharganj,murder,,2026-07-15 14:20:00,0.0,SI Sharma
+FIR-MAL-2026-9002,Unknown_District_ZZZ,Station X,suspicious_unregistered_activity,Near unnamed roundabout,2026-08-01 10:00:00,0.0,SI Verma
+FIR-MAL-2026-9003,North,Kotwali,assault,Chandni Chowk Main Gate,INVALID_DATE_FORMAT_TEXT,0.0,SI Singh

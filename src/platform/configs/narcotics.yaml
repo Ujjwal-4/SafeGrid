@@ -1,0 +1,55 @@
+domain: "narcotics"
+name: "Narcotics & Drug-Related Crimes"
+governing_law: "Narcotics Drugs and Psychotropic Substances (NDPS) Act, 1985 (Sec 8/20/21/22/27A/29)"
+required_evidence: "Physical recovery of contraband, independent panchnama witnesses present during raid, forensic chemical analysis (FSL), digital logs of supply coordination"
+color: "#10b981"
+geo_unit: "district"
+categories:
+  - "drug_trafficking"
+  - "illicit_storage"
+  - "seizure"
+  - "od_admission"
+  - "peddling_activity"
+aggregation_window: "monthly"
+indicators:
+  - name: "seizure_volume"
+    type: "numeric"
+    unit: "kg"
+    weight: 0.35
+    description: "Total gross weight of commercial narcotics seized"
+  - name: "od_admissions"
+    type: "count"
+    unit: "cases"
+    weight: 0.25
+    description: "Hospital emergency overdose admissions"
+  - name: "repeat_offender_density"
+    type: "rate"
+    unit: "per_sqkm"
+    weight: 0.20
+    description: "Identified street peddlers and known traffickers per sq km"
+  - name: "verified_tip_density"
+    type: "rate"
+    unit: "per_sqkm"
+    weight: 0.20
+    description: "Verified community tips per sq km"
+scoring_method:
+  method: "weighted_composite"
+  normalization: "min_max"
+  thresholds:
+    low: 0.30
+    medium: 0.60
+    high: 0.85
+report_template:
+  title: "Narcotics Threat Assessment & Supply Chain Interdiction Report"
+  classification: "RESTRICTED / LAW ENFORCEMENT SENSITIVE"
+  aggregation_period: "monthly"
+  sections:
+    - id: "executive_summary"
+      name: "Strategic Situation Summary"
+      required: true
+    - id: "indicator_breakdown"
+      name: "Interdiction Volume & Harm Metrics"
+      required: true
+    - id: "spatial_hotspots"
+      name: "Active Peddling Hotspots & Transit Corridors"
+      required: true

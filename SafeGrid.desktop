@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=SafeGrid
+Comment=Launch the SafeGrid demo
+Exec=/home/cygnus/.gemini/antigravity/scratch/bob-ai-hackathon-Team_Rocket-main/start.sh
+Icon=utilities-terminal
+Terminal=true
+Categories=Development;

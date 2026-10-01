@@ -1,0 +1,82 @@
+# =============================================================================
+# HACKATHON SUBMISSION METADATA
+# =============================================================================
+# Instructions:
+#   - Fill in ALL required fields (marked with # REQUIRED)
+#   - Optional fields can be left as empty strings ""
+#   - Do NOT rename this file — the evaluation pipeline reads it by name
+#   - Use double quotes around all string values
+# =============================================================================
+
+team:
+  name: "Team_Rocket"                  # REQUIRED
+  track: "AI"                          # REQUIRED - one of: AI | DevOps | Sustainability | Open
+  lead:
+    name: "Ujjwal Shakya"              # REQUIRED
+    email: ""                          # REQUIRED - TODO: add the team lead's email before pushing
+  members:
+    - name: "Ujjwal Shakya"
+      email: ""
+    - name: "Lakshya Samay Singh"
+      email: ""
+    - name: "Kshitij Sharma"
+      email: ""
+    - name: "Ruthvik Kattamanchi"
+      email: ""
+
+submission:
+  title: "SafeGrid: State-to-Zone Crime Hotspot Intelligence Platform"
+
+  problem_statement: >
+    Crime data is recorded at police-station level but managed across districts
+    and states, with no unified view. Officers and supervisors see FIRs, Dial-100
+    calls and 1930 helpline logs as separate silos, so hotspots, especially
+    unreported ones, surface late and enforcement stays reactive.
+
+  solution_summary: >
+    SafeGrid ingests FIR, Dial-100 and 1930 spreadsheets into one cleaned,
+    geocoded, de-duplicated incident model and maps raw crime frequency by
+    category with trend. An anonymous rate-limited tip portal captures unseen
+    hotspots, and an AI briefing layer narrates deterministically computed
+    scores into monthly and weekly enforcement briefs without ever inventing a score.
+
+  key_features:
+    - "Domain-agnostic Excel/CSV ingestion with column auto-detection, category normalisation and non-destructive row flagging"
+    - "Rate-limited Nominatim geocoding with SQLite cache and cross-channel spatio-temporal de-duplication (FIR/1930/Dial-100)"
+    - "Frequency hotspot map by district and category with previous-period trend"
+    - "Anonymous public tip portal with map-pin picker, per-IP rate limiting and officer verification"
+    - "AI-narrated monthly narcotics bulletin and weekly crime patrol brief (JSON/PDF) with strict compute/explain separation"
+
+  tech_stack:
+    languages: ["Python", "JavaScript"]
+    frameworks: ["Python http.server", "Express", "Leaflet.js"]
+    ibm_technologies: ["watsonx.ai text-generation adapter (not yet verified against a live endpoint)"]
+    databases: ["SQLite"]
+    other: ["JWT", "PDFKit", "OpenStreetMap Nominatim", "GitHub Actions"]
+
+  what_we_are_most_proud_of: >
+    The compute/explain split: every number on the map and in the AI briefs
+    comes from deterministic code over real ingested records, and the LLM only
+    narrates finished scores. The ingestion pipeline (row flagging, geocode
+    cache, cross-channel de-duplication) is what makes one trustworthy view possible.
+
+  known_limitations: >
+    Aggregation is district-level; the State to District to Zone drill-down is
+    not yet implemented. Tip-portal hardening is partial (client-side CAPTCHA,
+    client-supplied priority flags, no automatic tip deletion job). AI briefs
+    default to an offline mock provider; the watsonx.ai adapter is unverified
+    against a live endpoint. Demo credentials and a dev JWT secret default are
+    for local use only.
+
+# =============================================================================
+# ARTIFACT LOCATIONS
+# These paths are relative to the repo root. Only change if you moved files.
+# =============================================================================
+artifacts:
+  source_code: "src/"
+  setup_guide: "docs/setup-guide.md"
+  architecture_doc: "docs/architecture.md"
+  demo_video: "demo/demo-video-link.txt"   # URL to hosted video (YouTube, Loom, Box)
+  live_demo: "demo/live-demo-url.txt"      # URL to deployed demo (optional)
+  screenshots: "demo/screenshots/"
+  presentation: "presentation/"

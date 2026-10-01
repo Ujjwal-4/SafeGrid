@@ -1,0 +1,95 @@
+{
+  "domain": "crime",
+  "geo_unit": "district",
+  "categories": [
+    "theft",
+    "hit_and_run",
+    "assault",
+    "burglary"
+  ],
+  "aggregation_window": "weekly",
+  "indicators": [
+    {
+      "name": "incident_count",
+      "type": "count",
+      "unit": "incidents",
+      "weight": 0.4,
+      "description": "Total volume of reported crime incidents logged via FIR and emergency calls"
+    },
+    {
+      "name": "category_severity",
+      "type": "weighted_index",
+      "unit": "severity_score",
+      "weight": 0.4,
+      "description": "Aggregated index weighted by crime severity (burglary: 0.8, assault: 0.9, hit_and_run: 0.7, theft: 0.5)"
+    },
+    {
+      "name": "verified_tip_density",
+      "type": "rate",
+      "unit": "per_sqkm",
+      "weight": 0.2,
+      "description": "Concentration of verified public portal tips and Dial-100 validated intelligence"
+    }
+  ],
+  "scoring_method": {
+    "method": "weighted_composite",
+    "normalization": "min_max",
+    "thresholds": {
+      "low": 0.25,
+      "medium": 0.55,
+      "high": 0.8
+    }
+  },
+  "report_template": {
+    "title": "District Crime Intelligence & Tactical Deployment Weekly Report",
+    "classification": "RESTRICTED / LAW ENFORCEMENT SENSITIVE",
+    "aggregation_period": "weekly",
+    "sections": [
+      {
+        "id": "executive_summary",
+        "name": "Tactical Situation Overview",
+        "required": true
+      },
+      {
+        "id": "indicator_breakdown",
+        "name": "Crime Volume & Severity Index",
+        "required": true
+      },
+      {
+        "id": "spatial_hotspots",
+        "name": "High-Frequency Crime Hotspots & Patrol Corridors",
+        "required": true
+      },
+      {
+        "id": "citizen_intelligence",
+        "name": "Dial-100 & Citizen Portal Tips",
+        "required": true
+      },
+      {
+        "id": "patrol_directives",
+        "name": "PCR Van Deployment & Beat Officer Recommendations",
+        "required": true
+      }
+    ],
+    "kpis": [
+      "total_incidents",
+      "composite_severity_index",
+      "active_hotspot_clusters",
+      "dial100_dispatch_rate"
+    ],
+    "visualizations": [
+      {
+        "type": "hotspot_clusters",
+        "metric": "incident_density"
+      },
+      {
+        "type": "time_heatmap",
+        "metric": "temporal_distribution"
+      },
+      {
+        "type": "bar_chart",
+        "metric": "category_breakdown"
+      }
+    ]
+  }
+}

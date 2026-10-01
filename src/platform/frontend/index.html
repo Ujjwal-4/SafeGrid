@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crime & Narcotics Intelligence Platform</title>
+
+  <!-- Leaflet.js CSS for OpenStreetMap Interactive Geospatial Layer -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <!-- Chart.js for Predictive Visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <!-- Platform Custom Styles -->
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <a href="#" class="nav-brand"
+      onclick="if (state.token) navigateTo('dashboard'); else navigateTo('signin'); return false;">
+      <span class="nav-brand-icon">🛡️</span>
+      <div>
+        <span>SafeGrid</span>
+        <span class="nav-brand-sub">Crime Hotspot Analysis</span>
+      </div>
+    </a>
+
+    <ul class="nav-links" id="mainNavLinks">
+      <!-- Guest navigation (visible when logged out - exactly two options) -->
+      <li class="guest-only-nav"><a class="nav-link active" data-page="signin" onclick="navigateTo('signin')">🔐
+          Login</a></li>
+      <li class="guest-only-nav"><a class="nav-link" data-page="tips-portal" onclick="navigateTo('tips-portal')">📢
+          Public Portal</a></li>
+
+      <!-- Authenticated in-application navigation (visible after login) -->
+      <li class="auth-only-nav" style="display:none;"><a class="nav-link" data-page="dashboard"
+          onclick="navigateTo('dashboard')">📊 Hotspots</a></li>
+      <li class="auth-only-nav" style="display:none;"><a class="nav-link" data-page="forecast"
+          onclick="navigateTo('forecast')">🔮 Forecast & Allocation</a></li>
+      <li class="auth-only-nav" style="display:none;"><a class="nav-link" data-page="model-card"
+          onclick="navigateTo('model-card')">📈 Model Report</a></li>
+      <li class="auth-only-nav" style="display:none;"><a class="nav-link" data-page="upload"
+          onclick="navigateTo('upload')">📁 Log Ingestion</a></li>
+      <li class="auth-only-nav" style="display:none;"><a class="nav-link" data-page="tips-review"
+          onclick="navigateTo('tips-review')">🔍 Tips Review</a></li>
+      <li class="auth-only-nav" style="display:none;"><a class="nav-link" data-page="tips-portal"
+          onclick="navigateTo('tips-portal')">📢 Public Portal</a></li>
+    </ul>
+
+    <div class="nav-auth" id="navAuthContainer">
+      <span class="user-badge" id="officerBadge" style="display:none;"></span>
+      <button class="btn btn-outline btn-sm auth-only-nav" id="navLogoutBtn" style="display:none;"
+        onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- ====================================================================
+         PAGE 1: Sign-In Page (Officer Login)
+         ==================================================================== -->
+    <section class="page-view active" id="page-signin">
+      <div style="max-width: 480px; margin: 3rem auto;">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="card-title">🔐 Law Enforcement Officer Sign-In</div>
+              <div class="card-subtitle">Restricted access for sworn officers, supervisors & admins</div>
+            </div>
+          </div>
+
+          <form id="loginForm">
+            <div class="form-group">
+              <label class="form-label" for="loginBadgeId">Badge ID / Username</label>
+              <input type="text" id="loginBadgeId" class="form-control"
+                placeholder="e.g. admin, SUPER-101, or OFFICER-001" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="loginPassword">Secure Password</label>
+              <input type="password" id="loginPassword" class="form-control" placeholder="••••••••••••" required>
+            </div>
+
+            <div style="margin-bottom: 1.25rem; font-size: 0.8rem; color: var(--text-muted);">
+              Quick-fill credentials:
+              <a href="#" style="color:var(--accent-cyan); text-decoration:none; margin-left:0.4rem; font-weight:700;"
+                onclick="fillCredentials('admin', 'admin'); return false;">Admin</a> &bull;
+              <a href="#" style="color:var(--accent-cyan); text-decoration:none; margin-left:0.4rem;"
+                onclick="fillCredentials('SUPER-101', 'supervisor_pass'); return false;">Supervisor Rao</a> &bull;
+              <a href="#" style="color:var(--accent-cyan); text-decoration:none; margin-left:0.4rem;"
+                onclick="fillCredentials('OFFICER-001', 'officer_pass'); return false;">Officer Sharma</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="loginSubmitBtn" style="width: 100%;">
+              Sign In to Tactical Dashboard
+            </button>
+          </form>
+
+          <!-- Visible link to the public tip portal (no login required) -->
+          <div
+            style="margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid var(--border-color); text-align: center;">
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.5rem;">
+              Are you a citizen reporting suspicious narcotics or crime activity?
+            </p>
+            <a href="#" class="btn btn-outline btn-sm"
+              style="color:var(--accent-cyan); border-color:var(--accent-cyan);"
+              onclick="navigateTo('tips-portal'); return false;">
+              📢 Submit Anonymous Tip via Public Portal (No Login Required) &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PAGE 2: Dashboard (Map + Frequency Table + Sync Filter)
+         ==================================================================== -->
+    <section class="page-view" id="page-dashboard">
+      <!-- Filter Bar above BOTH map and table -->
+      <div class="filter-bar">
+        <div class="filter-group">
+          <label for="filterDomain">Intelligence Domain:</label>
+          <select id="filterDomain">
+            <option value="all" selected>All Domains (Every Hotspot Visible)</option>
+            <option value="physical_harm">🩸 Crimes Involving Physical Harm &amp; Violence</option>
+            <option value="women_children">🛡️ Crimes Against Women and Children</option>
+            <option value="property_crimes">📦 Crimes Against Property</option>
+            <option value="cybercrime">💻 Cybercrimes &amp; Digital Scams</option>
+            <option value="narcotics">🌿 Narcotics &amp; Drug-Related Crimes</option>
+            <option value="public_disturbance">⚠️ Public Disturbance &amp; Scams</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filterCategory">Subcategory Filter:</label>
+          <select id="filterCategory">
+            <option value="">All Categories</option>
+          </select>
+        </div>
+
+        <div class="filter-group" style="flex: 1;">
+          <label for="filterDistrict">Zone / District:</label>
+          <input type="text" id="filterDistrict" placeholder="Filter by district name (e.g. Central, Rohini)...">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted);" id="hotspotCountDisplay">
+          Loading hotspot data...
+        </div>
+      </div>
+
+      <!-- Geospatial Map Card -->
+      <div class="card" style="padding: 1rem;">
+        <div class="card-header" style="margin-bottom: 0.75rem; border-bottom: none; padding-bottom: 0;">
+          <div class="card-title">
+            <span>🗺️ Tactical Spatial Hotspots</span>
+            <span style="font-size: 0.75rem; font-weight: normal; color: var(--text-muted);">
+              (Circle SIZE represents raw frequency count; colors represent crime/narcotics categories)
+            </span>
+          </div>
+          <div>
+            <button class="btn btn-outline btn-sm" onclick="fetchHotspotsData()">⟳ Refresh Hotspots</button>
+          </div>
+        </div>
+
+        <!-- Leaflet Map Container -->
+        <div id="mapContainer"></div>
+      </div>
+
+      <!-- Hotspot Frequency & Trend Table Below Map -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">📋 Zone Frequency Counts & Dynamic Trend Analysis</div>
+          <div class="card-subtitle">Synchronized with active map filter parameters</div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>District / Jurisdiction</th>
+                <th>Domain</th>
+                <th>Category</th>
+                <th>Current Frequency (Count)</th>
+                <th>Previous Period</th>
+                <th>Trend Direction</th>
+              </tr>
+            </thead>
+            <tbody id="hotspotsTableBody">
+              <!-- Dynamically populated rows -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PAGE 3: Upload / Report Page (Excel/CSV Ingestion & Preview)
+         ==================================================================== -->
+    <section class="page-view" id="page-upload">
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">📥 Operational Log Ingestion (FIR / Dial-100 / 1930)</div>
+            <div class="card-subtitle">Upload raw Excel (.xlsx) or CSV files for automated column detection, geocoding &
+              deduplication</div>
+          </div>
+          <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+            <button class="btn btn-outline btn-sm" onclick="downloadReport('narcotics')">Download Narcotics
+              Report</button>
+            <button class="btn btn-outline btn-sm" onclick="downloadReport('crime')">Download Crime Report</button>
+            <button class="btn btn-outline btn-sm" style="color:var(--accent-cyan); border-color:var(--accent-cyan);"
+              onclick="generateAIReport('narcotics', 'monthly')">🤖 AI Narcotics Bulletin</button>
+            <button class="btn btn-outline btn-sm" style="color:var(--accent-cyan); border-color:var(--accent-cyan);"
+              onclick="generateAIReport('crime', 'weekly')">🤖 AI Crime Brief</button>
+          </div>
+        </div>
+
+        <form id="uploadForm">
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem; margin-bottom: 1.25rem;">
+            <div>
+              <div class="drop-zone" id="dropZone">
+                <div class="drop-zone-icon">📄</div>
+                <div style="font-weight: 600; margin-bottom: 0.25rem;">Drag & drop your police log file here, or click
+                  to browse</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Supports .xlsx (Excel) and .csv format</div>
+                <div id="selectedFileLabel"
+                  style="margin-top: 0.75rem; color: var(--accent-cyan); font-weight: 600; font-size: 0.85rem;"></div>
+              </div>
+              <input type="file" id="fileUploadInput" accept=".xlsx,.csv" style="display: none;">
+            </div>
+
+            <div>
+              <div class="form-group">
+                <label class="form-label" for="uploadDomainSelect">Target Intelligence Domain:</label>
+                <select id="uploadDomainSelect" class="form-control">
+                  <option value="physical_harm" selected>🩸 Physical Harm &amp; Violence (BNS Chap VI - Murder, Assault,
+                    Hit &amp; Run, Kidnapping)</option>
+                  <option value="women_children">🛡️ Crimes Against Women &amp; Children (BNS Chap V / POCSO)</option>
+                  <option value="property_crimes">📦 Crimes Against Property (BNS Chap XVII - Theft, Burglary, Robbery,
+                    Arson)</option>
+                  <option value="cybercrime">💻 Cybercrimes &amp; Digital Scams (IT Act 2000 / 1930)</option>
+                  <option value="narcotics">🌿 Narcotics &amp; Drug-Related Crimes (NDPS Act 1985)</option>
+                  <option value="public_disturbance">⚠️ Public Disturbance &amp; Scams (BNS Chap XI &amp; XVII -
+                    Rioting, Forgery)</option>
+                </select>
+              </div>
+
+              <div
+                style="background: rgba(2, 132, 199, 0.08); border: 1px solid rgba(2, 132, 199, 0.2); border-radius: 6px; padding: 0.85rem; font-size: 0.8rem; color: #bae6fd; margin-bottom: 1rem;">
+                <strong>Auto-Pipeline Features:</strong>
+                <ul style="margin-left: 1.25rem; margin-top: 0.35rem; line-height: 1.5;">
+                  <li>Auto-detects address, category & timestamps</li>
+                  <li>OSM Nominatim geocoding (~1 req/s queue)</li>
+                  <li>Flags unmapped rows instead of dropping them</li>
+                  <li>Spatio-temporal duplicate detection (Dial-100 vs FIR)</li>
+                </ul>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="uploadBtn" style="width: 100%;" disabled>
+                Upload & Ingest Operational Log
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Ingestion Results Preview Container -->
+        <div id="uploadPreviewContainer" style="display: none; margin-top: 2rem;">
+          <h3 style="font-size: 1.1rem; margin-bottom: 1rem; color: var(--accent-cyan);">
+            📊 Ingestion Processing Summary & Preview
+          </h3>
+
+          <!-- KPI Summary Cards -->
+          <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+            <div class="card" style="padding: 1rem; margin-bottom: 0; background: var(--bg-card);">
+              <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Total Rows Read
+              </div>
+              <div style="font-size: 1.5rem; font-weight: 800;" id="kpiTotalRows">0</div>
+            </div>
+            <div class="card"
+              style="padding: 1rem; margin-bottom: 0; background: var(--bg-card); border-left: 3px solid #10b981;">
+              <div style="font-size: 0.75rem; color: #6ee7b7; text-transform: uppercase;">Valid Incidents</div>
+              <div style="font-size: 1.5rem; font-weight: 800; color: #10b981;" id="kpiValidIncidents">0</div>
+            </div>
+            <div class="card"
+              style="padding: 1rem; margin-bottom: 0; background: var(--bg-card); border-left: 3px solid #f59e0b;">
+              <div style="font-size: 0.75rem; color: #fcd34d; text-transform: uppercase;">Flagged / Unmapped</div>
+              <div style="font-size: 1.5rem; font-weight: 800; color: #f59e0b;" id="kpiFlaggedRows">0</div>
+            </div>
+            <div class="card"
+              style="padding: 1rem; margin-bottom: 0; background: var(--bg-card); border-left: 3px solid #ef4444;">
+              <div style="font-size: 0.75rem; color: #fca5a5; text-transform: uppercase;">Duplicate Pairs Flagged</div>
+              <div style="font-size: 1.5rem; font-weight: 800; color: #ef4444;" id="kpiDuplicates">0</div>
+            </div>
+          </div>
+
+          <!-- Flagged Reasons Breakdown Summary Bar -->
+          <div id="flaggedBreakdownContainer" style="display: none; margin-bottom: 1.25rem;"></div>
+
+          <!-- Preview Tabs -->
+          <div style="display: flex; gap: 0.5rem; border-bottom: 1px solid var(--border-color); margin-bottom: 1rem;">
+            <button class="btn btn-outline btn-sm upload-tab-btn active" id="tabBtn-valid"
+              onclick="switchUploadTab('valid')">
+              Clean Geocoded Incidents
+            </button>
+            <button class="btn btn-outline btn-sm upload-tab-btn" id="tabBtn-flagged"
+              onclick="switchUploadTab('flagged')">
+              Flagged / Unmapped Rows (Needs Attention)
+            </button>
+          </div>
+
+          <!-- Clean Incidents Table Tab -->
+          <div class="upload-tab-pane" id="tabPane-valid">
+            <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>UUID</th>
+                    <th>Source</th>
+                    <th>District</th>
+                    <th>Category</th>
+                    <th>Address Text</th>
+                    <th>Coordinates</th>
+                    <th>Occurred At</th>
+                    <th>Deduplication</th>
+                  </tr>
+                </thead>
+                <tbody id="validIncidentsTbody">
+                  <!-- Ingested valid rows -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Flagged Rows Table Tab -->
+          <div class="upload-tab-pane" id="tabPane-flagged" style="display: none;">
+            <div class="table-responsive" style="max-height: 400px; overflow-y: auto;">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Row #</th>
+                    <th>Flag Reasons (Why row couldn't be confidently mapped)</th>
+                    <th>Confidence</th>
+                    <th>Raw Row Data Dump</th>
+                  </tr>
+                </thead>
+                <tbody id="flaggedRowsTbody">
+                  <!-- Ingested flagged rows -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PAGE 4: Public Tip Portal (Anonymous, No Auth, Captcha)
+         ==================================================================== -->
+    <section class="page-view" id="page-tips-portal">
+      <div style="max-width: 800px; margin: 0 auto;">
+
+        <!-- Anonymous Guarantee Banner -->
+        <div class="portal-banner">
+          <div class="portal-banner-icon">🔒</div>
+          <div>
+            <h3 style="font-size: 1.05rem; color: #93c5fd; margin-bottom: 0.2rem;">
+              100% Anonymous Citizen Intelligence Portal
+            </h3>
+            <p style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.4;">
+              Your safety and privacy are strictly safeguarded. <strong>No name, phone number, email address, or IP
+                logs</strong> are collected or stored with your submission. Information is routed directly into
+              encrypted tactical analysis queues.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">📢 Submit an Anonymous Tip</div>
+            <div class="card-subtitle">Report drug peddling, trafficking, or criminal activities in your neighborhood
+            </div>
+          </div>
+
+          <form id="publicTipForm">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label class="form-label" for="tipDomainSelect">Primary Legal Domain *</label>
+                <select id="tipDomainSelect" class="form-control" required>
+                  <option value="physical_harm" selected>🩸 Crimes Involving Physical Harm &amp; Violence</option>
+                  <option value="women_children">🛡️ Crimes Against Women and Children</option>
+                  <option value="property_crimes">📦 Crimes Against Property (Theft &amp; Damage)</option>
+                  <option value="cybercrime">💻 Cybercrimes &amp; Digital Scams (Helpline 1930)</option>
+                  <option value="narcotics">🌿 Narcotics &amp; Drug-Related Crimes (Helpline 1933)</option>
+                  <option value="public_disturbance">⚠️ Public Disturbance &amp; Scams</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="tipCategorySelect">Specific Offense / Subcategory *</label>
+                <select id="tipCategorySelect" class="form-control" required>
+                  <!-- Populated dynamically via JavaScript -->
+                </select>
+              </div>
+            </div>
+
+            <!-- Statutory Law & Recommended Evidence Guidance Card -->
+            <div id="tipLegalGuidanceCard"
+              style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 6px; padding: 0.85rem 1rem; margin-bottom: 1.25rem;">
+              <div style="font-size: 0.8rem; font-weight: 700; color: #38bdf8; margin-bottom: 0.35rem;"
+                id="tipGoverningLawDisplay">
+                ⚖️ Governing Law: Chapter VI of Bharatiya Nyaya Sanhita, 2023 (BNS)
+              </div>
+              <div style="font-size: 0.75rem; color: #94a3b8; line-height: 1.45;" id="tipEvidenceGuidanceDisplay">
+                📌 Recommended Evidence under BSA 2023: Medical reports (MLC), blood samples, weapons recovered from
+                spot, CCTV footage of assault, eyewitness testimony.
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="tipDistrictSelect">Region / District Jurisdiction *</label>
+              <select id="tipDistrictSelect" class="form-control" required>
+                <option value="New Delhi">New Delhi</option>
+                <option value="Central" selected>Central</option>
+                <option value="North">North</option>
+                <option value="North West">North West</option>
+                <option value="West">West</option>
+                <option value="South West">South West</option>
+                <option value="South">South</option>
+                <option value="South East">South East</option>
+                <option value="East">East</option>
+                <option value="Shahdara">Shahdara</option>
+                <option value="North East">North East</option>
+                <option value="Rohini">Rohini</option>
+                <option value="Outer">Outer</option>
+                <option value="Outer North">Outer North</option>
+                <option value="Dwarka">Dwarka</option>
+                <option value="Gurugram East">Gurugram East</option>
+                <option value="Noida Central">Noida Central</option>
+                <option value="Faridabad NIT">Faridabad NIT</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="tipDescription">Description of Observed Activity *</label>
+              <textarea id="tipDescription" class="form-control"
+                placeholder="Describe what you observed: locations, vehicles, timings, suspicious activity patterns..."
+                required></textarea>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: start;">
+              <div class="form-group">
+                <label class="form-label" for="tipPhotoInput">Optional Photo Upload</label>
+                <input type="file" id="tipPhotoInput" class="form-control" accept="image/*">
+                <small style="color: var(--text-muted); font-size: 0.75rem;">Metadata is automatically stripped for your
+                  privacy</small>
+              </div>
+
+              <div class="form-group" style="padding-top: 1.5rem;">
+                <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                  <input type="checkbox" id="tipIsUrgent" style="width: auto;">
+                  <span style="font-size: 0.85rem; font-weight: 600; color: #fca5a5;">Mark as Urgent (Happening
+                    Now)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Optional Interactive Map-Pin Location Picker -->
+            <div class="form-group" style="margin-top: 1rem;">
+              <label class="form-label">
+                Optional Map-Pin Location Picker (Click map to pin exact spot)
+              </label>
+              <div
+                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem; font-size: 0.75rem;">
+                <span id="tipCoordsDisplay" style="color: var(--accent-cyan); font-family: var(--font-mono);">No
+                  location pinned (optional)</span>
+                <button type="button" class="btn btn-outline btn-sm" onclick="clearTipPin()">Clear Pin</button>
+              </div>
+              <div id="tipPickerMap" style="height: 240px; border-radius: 6px; border: 1px solid var(--border-color);">
+              </div>
+              <input type="hidden" id="tipLatInput">
+              <input type="hidden" id="tipLngInput">
+            </div>
+
+            <!-- Interactive Bot Prevention (hCaptcha) Challenge -->
+            <div class="captcha-box">
+              <div class="captcha-challenge">
+                <span style="font-size: 0.85rem; font-weight: 600;">Human Verification:</span>
+                <span class="captcha-badge" id="captchaBadge">8KZ3W</span>
+                <button type="button" class="btn btn-outline btn-sm" onclick="generateCaptcha()"
+                  title="Refresh Security Code">⟳</button>
+              </div>
+              <div style="max-width: 180px;">
+                <input type="text" id="captchaInput" class="form-control" placeholder="Enter code"
+                  style="text-transform: uppercase;" required>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-success" id="tipSubmitBtn" style="width: 100%; padding: 0.75rem;">
+              🛡️ Submit Anonymous Tip
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PAGE 5: Tips Review Page (Officer-Only)
+         ==================================================================== -->
+    <section class="page-view" id="page-tips-review">
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">🔍 Intelligence Tips Review & Verification</div>
+            <div class="card-subtitle">Review incoming public portal reports, corroborated clusters, and execute status
+              verifications</div>
+          </div>
+          <div>
+            <button class="btn btn-outline btn-sm" onclick="loadOfficerTips()">⟳ Refresh Tips</button>
+          </div>
+        </div>
+
+        <!-- Filter bar for Tips -->
+        <div class="filter-bar" style="margin-bottom: 1.5rem;">
+          <div class="filter-group">
+            <label for="reviewStatusFilter">Status:</label>
+            <select id="reviewStatusFilter" onchange="loadOfficerTips()">
+              <option value="pending" selected>Pending Review</option>
+              <option value="verified_true">Verified True</option>
+              <option value="verified_false">Marked False</option>
+              <option value="">All Statuses</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="reviewDistrictFilter">Filter by Region / District:</label>
+            <input type="text" id="reviewDistrictFilter" placeholder="Type district name..."
+              oninput="loadOfficerTips()">
+          </div>
+        </div>
+
+        <!-- Dynamic List of Tips -->
+        <div id="tipsReviewList">
+          <!-- Dynamically populated tip cards -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PAGE 5: Forecast & Prescriptive Allocation (Predictive Layer)
+         ==================================================================== -->
+    <section class="page-view" id="page-forecast">
+      <div
+        style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.75rem;">
+        <div>
+          <h2 style="font-size:1.5rem; font-weight:700; color:var(--text-primary); margin:0;">🔮 Predictive Hotspots &
+            Patrol Allocation</h2>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin:0.25rem 0 0 0;">
+            Area-level time-series forecasting, Poisson ML ensemble, and prescriptive unit dispatch
+          </p>
+        </div>
+        <div>
+          <button class="btn btn-primary btn-sm" onclick="loadForecastData()">🔄 Refresh Forecast</button>
+        </div>
+      </div>
+
+      <!-- Scientific Guardrail Banner -->
+      <div
+        style="background:rgba(59, 130, 246, 0.1); border:1px solid rgba(59, 130, 246, 0.3); border-radius:6px; padding:0.6rem 1rem; margin-bottom:1.25rem; font-size:0.8rem; color:#93c5fd; display:flex; align-items:center; gap:0.5rem;">
+        <span>🛡️</span>
+        <span><strong>MANDATORY STATUTORY GUARDRAIL:</strong> Forecast of reported incidents only. Area-level aggregate
+          modeling; no individual profiling. Showing 90% confidence prediction intervals.</span>
+      </div>
+
+      <!-- Forecast Filter Controls -->
+      <div class="filter-bar" style="margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
+        <div class="filter-group">
+          <label for="fcCategorySelect">Category:</label>
+          <select id="fcCategorySelect" onchange="loadForecastData()">
+            <option value="all" selected>All Categories</option>
+            <option value="theft">Theft</option>
+            <option value="burglary">Burglary</option>
+            <option value="assault">Assault</option>
+            <option value="hit_and_run">Hit & Run</option>
+            <option value="narcotics">Narcotics</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="fcLevelSelect">Hierarchy Level:</label>
+          <select id="fcLevelSelect" onchange="loadForecastData()">
+            <option value="zone" selected>Zone (Police Station)</option>
+            <option value="district">District (Aggregated)</option>
+            <option value="state">State (Hierarchical Rollup)</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="fcStateSelect">State:</label>
+          <select id="fcStateSelect" onchange="onFcStateChanged()">
+            <option value="" selected>All States</option>
+            <option value="Delhi NCT">Delhi NCT</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="fcDistrictSelect">District:</label>
+          <select id="fcDistrictSelect" onchange="loadForecastData()">
+            <option value="" selected>All Districts</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="fcHorizonSelect">Horizon:</label>
+          <select id="fcHorizonSelect" onchange="loadForecastData()">
+            <option value="4w" selected>4 Weeks (Tactical)</option>
+            <option value="3m">3 Months (Quarterly)</option>
+            <option value="6m">6 Months (Strategic)</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="fcRangeSelect">History Range:</label>
+          <select id="fcRangeSelect" onchange="loadForecastData()">
+            <option value="6m">6 Months</option>
+            <option value="1y" selected>1 Year</option>
+            <option value="all">All Available</option>
+          </select>
+        </div>
+
+        <div class="filter-group" style="display:flex; align-items:center; gap:0.4rem; padding-top:1.2rem;">
+          <input type="checkbox" id="fcPerCapitaToggle" onchange="loadForecastData()">
+          <label for="fcPerCapitaToggle" style="margin:0; cursor:pointer;">Per 100k Capita</label>
+        </div>
+      </div>
+
+      <!-- Top Row: Actual vs Forecast Line Chart & Category Mix -->
+      <div style="display:grid; grid-template-columns: 2fr 1fr; gap:1.25rem; margin-bottom:1.5rem;">
+        <div class="card" style="padding:1.25rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <div>
+              <div class="card-title" style="font-size:1.05rem;">📈 Actual vs Forecast Incident Trajectory</div>
+              <div class="card-subtitle">Solid blue = Historical Actuals | Cyan dashed = Forecast | Translucent band =
+                90% Confidence Interval</div>
+            </div>
+            <div id="fcConfidenceBadge" class="badge"
+              style="background:rgba(16, 185, 129, 0.15); color:#6ee7b7; border:1px solid #10b981;">Confidence: 91%
+            </div>
+          </div>
+          <div style="position:relative; height:280px; width:100%;">
+            <canvas id="forecastLineChart"></canvas>
+          </div>
+        </div>
+
+        <div class="card" style="padding:1.25rem;">
+          <div class="card-title" style="font-size:1.05rem; margin-bottom:0.25rem;">🥧 Category Crime Mix</div>
+          <div class="card-subtitle" style="margin-bottom:1rem;">Proportional share across selected area</div>
+          <div
+            style="position:relative; height:240px; width:100%; display:flex; align-items:center; justify-content:center;">
+            <canvas id="categoryMixChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Middle Row: Predicted-Hotspot Map & Top-Movers Table -->
+      <div style="display:grid; grid-template-columns: 1.5fr 1fr; gap:1.25rem; margin-bottom:1.5rem;">
+        <div class="card" style="padding:1rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.75rem;">
+            <div>
+              <div class="card-title" style="font-size:1.05rem;">🗺️ Predicted Future Hotspot Map</div>
+              <div class="card-subtitle">Circle color = Category | Radius = Forecast volume | Arrow = Growth trajectory
+              </div>
+            </div>
+            <div style="font-size:0.75rem; color:var(--text-muted);">
+              ↗ Accelerating &bull; → Stable &bull; ↘ Cooling
+            </div>
+          </div>
+          <div id="forecastMapContainer"
+            style="height:380px; width:100%; border-radius:6px; border:1px solid var(--border-color);"></div>
+        </div>
+
+        <div class="card" style="padding:1.25rem; display:flex; flex-direction:column;">
+          <div class="card-title" style="font-size:1.05rem; margin-bottom:0.25rem;">🚀 Top Movers & Surging Hotspots
+          </div>
+          <div class="card-subtitle" style="margin-bottom:0.75rem;">Ranked by Expected Change Ratio (Forecast /
+            Baseline)</div>
+          <div style="overflow-y:auto; max-height:340px; flex:1;">
+            <table class="table" style="font-size:0.8rem;">
+              <thead>
+                <tr>
+                  <th>Zone</th>
+                  <th>Forecast</th>
+                  <th>Ratio</th>
+                  <th>Trend</th>
+                </tr>
+              </thead>
+              <tbody id="topMoversTableBody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Row: Weekday x Hour Temporal Matrix & Patrol Allocation -->
+      <div style="display:grid; grid-template-columns: 1.2fr 1.2fr; gap:1.25rem; margin-bottom:1.5rem;">
+        <div class="card" style="padding:1.25rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <div>
+              <div class="card-title" style="font-size:1.05rem;">⏱️ Temporal Heatmap (Weekday × Hour)</div>
+              <div class="card-subtitle">Historical incident density by day of week and hour of day</div>
+            </div>
+            <div id="peakTimeBadge" class="badge"
+              style="background:rgba(239, 68, 68, 0.15); color:#fca5a5; border:1px solid #ef4444;">Peak: Sat 22:00</div>
+          </div>
+          <div id="temporalHeatmapContainer" style="overflow-x:auto; margin-top:0.75rem;">
+            <!-- 7x24 heatmap grid dynamically rendered -->
+          </div>
+        </div>
+
+        <div class="card" style="padding:1.25rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+            <div>
+              <div class="card-title" style="font-size:1.05rem;">🚓 Prescriptive Patrol Allocation</div>
+              <div class="card-subtitle">Optimal resource distribution proportional to forecast risk with minimum
+                guarantees</div>
+            </div>
+          </div>
+          <div
+            style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem; background:rgba(255,255,255,0.02); padding:0.75rem; border-radius:6px; border:1px solid var(--border-color);">
+            <label for="patrolUnitsInput" style="font-size:0.85rem; color:var(--text-secondary); margin:0;">Total Units
+              (N):</label>
+            <input type="range" id="patrolUnitsRange" min="5" max="60" value="20"
+              oninput="document.getElementById('patrolUnitsInput').value = this.value; calculatePatrolAllocation();"
+              style="flex:1;">
+            <input type="number" id="patrolUnitsInput" value="20" min="5" max="60" style="width:60px;"
+              class="form-control"
+              onchange="document.getElementById('patrolUnitsRange').value = this.value; calculatePatrolAllocation();">
+            <button class="btn btn-primary btn-sm" onclick="calculatePatrolAllocation()">Compute</button>
+          </div>
+          <div style="overflow-y:auto; max-height:260px;">
+            <table class="table" style="font-size:0.8rem;">
+              <thead>
+                <tr>
+                  <th>Zone</th>
+                  <th>Units</th>
+                  <th>Share</th>
+                  <th>Rationale</th>
+                </tr>
+              </thead>
+              <tbody id="patrolAllocationTableBody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PAGE 6: Model Report Card & Walk-Forward Audit
+         ==================================================================== -->
+    <section class="page-view" id="page-model-card">
+      <div
+        style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap; gap:1rem;">
+        <div>
+          <h2 style="font-size:1.5rem; font-weight:700; color:var(--text-primary); margin:0;">📈 Model Report Card &
+            Audit Log</h2>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin:0.25rem 0 0 0;">
+            Expanding-window walk-forward evaluation, error tracking, and model governance
+          </p>
+        </div>
+        <div>
+          <button class="btn btn-primary btn-sm" onclick="triggerRetrainManual()">⚡ Trigger Walk-Forward
+            Retraining</button>
+        </div>
+      </div>
+
+      <!-- Current Champion Card -->
+      <div
+        style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1rem; margin-bottom:1.5rem;">
+        <div class="card" style="padding:1.25rem; border-left:4px solid var(--accent-cyan);">
+          <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Current Champion Model
+          </div>
+          <div style="font-size:1.35rem; font-weight:700; color:var(--accent-cyan); margin:0.35rem 0;"
+            id="cardChampionModel">Loading...</div>
+          <div style="font-size:0.75rem; color:#6ee7b7;">Lowest Poisson Deviance</div>
+        </div>
+
+        <div class="card" style="padding:1.25rem; border-left:4px solid #3b82f6;">
+          <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Mean Absolute Error (MAE)
+          </div>
+          <div style="font-size:1.35rem; font-weight:700; color:#93c5fd; margin:0.35rem 0;" id="cardMAE">-</div>
+          <div style="font-size:0.75rem; color:var(--text-secondary);">Avg absolute weekly count error</div>
+        </div>
+
+        <div class="card" style="padding:1.25rem; border-left:4px solid #8b5cf6;">
+          <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Poisson Deviance</div>
+          <div style="font-size:1.35rem; font-weight:700; color:#c4b5fd; margin:0.35rem 0;" id="cardPoissonDev">-</div>
+          <div style="font-size:0.75rem; color:var(--text-secondary);">Log-likelihood evaluation loss</div>
+        </div>
+
+        <div class="card" style="padding:1.25rem; border-left:4px solid #10b981;">
+          <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Top-5 Hit Rate</div>
+          <div style="font-size:1.35rem; font-weight:700; color:#6ee7b7; margin:0.35rem 0;" id="cardHitRate">-</div>
+          <div style="font-size:0.75rem; color:var(--text-secondary);">Top hotspot recall accuracy</div>
+        </div>
+
+        <div class="card" style="padding:1.25rem; border-left:4px solid #f59e0b;">
+          <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Prediction Accuracy Index
+            (PAI)</div>
+          <div style="font-size:1.35rem; font-weight:700; color:#fcd34d; margin:0.35rem 0;" id="cardPAI">-</div>
+          <div style="font-size:0.75rem; color:var(--text-secondary);">&gt; 1.0 indicates targeting efficiency</div>
+        </div>
+      </div>
+
+      <!-- Historical Metrics Table -->
+      <div class="card" style="padding:1.25rem; margin-bottom:1.5rem;">
+        <div class="card-title" style="font-size:1.05rem; margin-bottom:0.25rem;">📜 Retraining History & Audit Trail
+        </div>
+        <div class="card-subtitle" style="margin-bottom:1rem;">Appended automatically after every incident upload or
+          supervisor trigger</div>
+        <div style="overflow-x:auto;">
+          <table class="table" style="font-size:0.85rem;">
+            <thead>
+              <tr>
+                <th>Trained At</th>
+                <th>Incidents</th>
+                <th>Champion Model</th>
+                <th>MAE</th>
+                <th>Poisson Deviance</th>
+                <th>Hit Rate @ 5</th>
+                <th>PAI</th>
+              </tr>
+            </thead>
+            <tbody id="modelMetricsHistoryBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Scientific Disclaimer Banner -->
+      <div class="card" style="background:#090d16; border-left:4px solid #eab308; padding:1.25rem;">
+        <div style="font-weight:700; color:#fde047; margin-bottom:0.4rem;">🔬 Scientific & Governance Note</div>
+        <div style="font-size:0.85rem; color:var(--text-secondary); line-height:1.5;">
+          The walk-forward evaluation guarantees time-ordered validation without future information leakage. All outputs
+          are strictly designated as <em>"forecast of reported incidents"</em>.
+          Results on synthetic test sets validate the algorithmic pipeline, ensemble mechanics, and backtest workflow,
+          and should be calibrated with local demographic baselines before tactical redeployment.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Anonymous Tip Confirmation Modal -->
+  <div id="tipModal"
+    style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.75); z-index:9999; align-items:center; justify-content:center;">
+    <div class="card" style="max-width:480px; width:90%; padding:2rem; text-align:center;">
+      <div style="font-size:3rem; margin-bottom:1rem;">✅</div>
+      <h3 style="font-size:1.3rem; margin-bottom:0.5rem; color:#6ee7b7;">Anonymous Tip Submitted</h3>
+      <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:1.25rem;">
+        Your intelligence report has been securely registered in the dispatch queue. No personal information or digital
+        footprint was logged.
+      </p>
+      <div
+        style="background:#090d16; border:1px solid var(--border-color); border-radius:6px; padding:0.75rem; margin-bottom:1.5rem;">
+        <div style="font-size:0.75rem; color:var(--text-muted);">ENCRYPTED REFERENCE ID:</div>
+        <div style="font-family:var(--font-mono); font-size:0.95rem; color:var(--accent-cyan); font-weight:700;"
+          id="tipReceiptId">-</div>
+      </div>
+      <button class="btn btn-primary" style="width:100%;" onclick="closeTipModal()">Done</button>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast"></div>
+
+  <!-- Leaflet.js Interactive Geospatial Library -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- Application Controller -->
+  <script src="/js/app.js"></script>
+</body>
+
+</html>

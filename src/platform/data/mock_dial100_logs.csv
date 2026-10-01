@@ -1,0 +1,181 @@
+Call_Ticket_ID,Zone_Division,Caller_Reported_Location,Call_Nature_Code,Dispatch_DateTime,Caller_Phone_Masked,PCR_Unit_Assigned
+PCR-DL-080001,South,"SDA Market, Opp IIT Gate",kidnapping,2026-05-13 21:08:00,9876518200,EAGLE-84
+PCR-DL-080002,Dwarka,"Sector 10 Main Market, Dwarka",hit_and_run,2026-09-13 19:25:00,9811070012,COMMANDO-49
+PCR-DL-080003,South West,Najafgarh Main Bus Stand,vandalism_arson,2026-07-04 05:23:00,9811064819,COMMANDO-48
+PCR-DL-080004,West,"Mall Road, Tilak Nagar Metro Gate 2",theft_burglary,2026-09-06 15:18:00,9811069113,COMMANDO-49
+PCR-DL-080005,Outer,Sultanpuri Block C Main Road,vandalism_arson,2026-06-10 01:17:00,9811032047,COMMANDO-39
+PCR-DL-080006,Gurugram East,Sikanderpur Metro Station Crossing,rioting,2026-09-09 10:08:00,9876581611,EAGLE-38
+PCR-DL-080007,Outer North,Holambi Kalan Railway Crossing,theft_burglary,2026-05-15 03:49:00,9811087060,COMMANDO-32
+PCR-DL-080008,South,"Anupam Cinema Complex, Saket",child_abuse,2026-07-23 09:18:00,9811022481,COMMANDO-18
+PCR-DL-080009,Outer North,"GT Karnal Road, Singhu Border",rioting,2026-06-25 21:25:00,9811092890,COMMANDO-27
+PCR-DL-080010,Outer North,Holambi Kalan Railway Crossing,murder,2026-07-15 15:20:00,9811070089,COMMANDO-50
+PCR-DL-080011,Outer North,Shahbad Dairy Block A,illicit_storage,2026-07-11 09:22:00,9876599463,EAGLE-17
+PCR-DL-080012,Central,"Ansari Road, Daryaganj",vandalism_arson,2026-05-14 06:44:00,9811030837,COMMANDO-27
+PCR-DL-080013,North,"ISBT Kashmere Gate, Departure Block",murder,2026-06-14 20:05:00,9811072496,COMMANDO-14
+PCR-DL-080014,New Delhi,"Shanti Path, Chanakyapuri",murder,2026-08-03 23:51:00,9811058177,COMMANDO-29
+PCR-DL-080015,West,"Club Road Market, Punjabi Bagh",child_abuse,2026-09-21 05:28:00,9811092323,COMMANDO-19
+PCR-DL-080016,Outer North,Bawana Industrial Area Sector 2,financial_fraud,2026-06-04 02:23:00,9876566280,EAGLE-51
+PCR-DL-080017,Shahdara,Dilshad Garden Pocket B,robbery_snatching,2026-07-21 01:50:00,9811024777,COMMANDO-25
+PCR-DL-080018,Gurugram East,"Cyber Hub, DLF Cyber City, Sector 24",rioting,2026-07-18 21:11:00,9811086986,COMMANDO-14
+PCR-DL-080019,New Delhi,"Block B, Inner Circle, Connaught Place",robbery_snatching,2026-08-23 12:05:00,9811050620,COMMANDO-15
+PCR-DL-080020,North,Kashmere Gate Ring Road Flyover,hit_and_run,2026-08-04 14:39:00,9811096252,COMMANDO-21
+PCR-DL-080021,North West,"Ring Road, Netaji Subhash Place",theft_burglary,2026-05-23 03:55:00,9876577793,EAGLE-44
+PCR-DL-080022,South West,Kapashera Border check post,hit_and_run,2026-05-11 13:17:00,9811085582,COMMANDO-50
+PCR-DL-080023,South West,"Nelson Mandela Marg, Vasant Kunj",assault,2026-09-01 01:54:00,9811071835,COMMANDO-33
+PCR-DL-080024,Outer,"Outer Ring Road, Paschim Vihar West",hit_and_run,2026-08-24 10:17:00,9811075803,COMMANDO-13
+PCR-DL-080025,South West,"Palam Colony, Main Palam-Dabri Road",rioting,2026-07-11 02:35:00,9811036302,COMMANDO-28
+PCR-DL-080026,Rohini,"Sector 7 Main Road, Rohini",child_abuse,2026-06-18 03:27:00,9876540539,EAGLE-80
+PCR-DL-080027,Rohini,"Sector 3 Market, Rohini",cheating_forgery,2026-05-07 16:15:00,9811028661,COMMANDO-27
+PCR-DL-080028,North,"Old Delhi Railway Station, Platform 1 Exit",rioting,2026-09-04 16:08:00,9811084425,COMMANDO-13
+PCR-DL-080029,North East,Jafrabad Metro Station Gate 1,theft_burglary,2026-06-25 18:06:00,9811068925,COMMANDO-39
+PCR-DL-080030,North East,"Wazirabad Road, Bhajanpura Chowk",vandalism_arson,2026-07-28 03:05:00,9811089076,COMMANDO-12
+PCR-DL-080031,South,"Press Enclave Road, Saket District Centre",murder,2026-06-23 09:29:00,9876549169,EAGLE-44
+PCR-DL-080032,Dwarka,"Sector 6 Central Market, Dwarka",hit_and_run,2026-08-12 21:40:00,9811012857,COMMANDO-14
+PCR-DL-080033,South,"Hauz Khas Village, Near Tank",cheating_forgery,2026-05-06 18:27:00,9811060165,COMMANDO-37
+PCR-DL-080034,South West,"Palam Colony, Main Palam-Dabri Road",vandalism_arson,2026-05-20 19:39:00,9811075390,COMMANDO-36
+PCR-DL-080035,Outer North,Samaypur Badli Metro Station,sexual_offenses,2026-08-18 15:22:00,9811033568,COMMANDO-11
+PCR-DL-080036,North East,"Seelampur Market, GT Road",cheating_forgery,2026-08-02 15:32:00,9876523124,EAGLE-42
+PCR-DL-080037,South East,Govindpuri Extension Gali 7,vandalism_arson,2026-07-27 05:11:00,9811057026,COMMANDO-47
+PCR-DL-080038,South,"Shivalik Main Road, Malviya Nagar",rioting,2026-06-20 07:01:00,9811090495,COMMANDO-22
+PCR-DL-080039,West,"Main Ring Road, Rajouri Garden",hit_and_run,2026-09-23 04:49:00,9811058967,COMMANDO-35
+PCR-DL-080040,North West,"Ring Road, Netaji Subhash Place",domestic_violence,2026-07-06 22:35:00,9811087194,COMMANDO-21
+PCR-DL-080041,New Delhi,Tolstoy Marg near KG Marg crossing,drug_trafficking,2026-09-06 09:07:00,9876584127,EAGLE-24
+PCR-DL-080042,Gurugram East,"Vyapar Kendra, Sushant Lok Phase 1",theft_burglary,2026-07-15 00:16:00,9811018885,COMMANDO-32
+PCR-DL-080043,East,Patparganj Industrial Area,cheating_forgery,2026-06-14 15:56:00,9811059197,COMMANDO-16
+PCR-DL-080044,Dwarka,"Sector 10 Main Market, Dwarka",murder,2026-07-06 12:10:00,9811087860,COMMANDO-49
+PCR-DL-080045,Gurugram East,"Vyapar Kendra, Sushant Lok Phase 1",cheating_forgery,2026-05-11 06:12:00,9811046899,COMMANDO-29
+PCR-DL-080046,South East,"Central Market, Lajpat Nagar II",identity_theft,2026-09-19 13:53:00,9876510500,EAGLE-65
+PCR-DL-080047,North West,"Ring Road, Netaji Subhash Place",domestic_violence,2026-08-16 15:57:00,9811081319,COMMANDO-34
+PCR-DL-080048,South West,"Nelson Mandela Marg, Vasant Kunj",child_abuse,2026-08-09 07:53:00,9811029808,COMMANDO-16
+PCR-DL-080049,North,Mukherjee Nagar Commercial Complex,rioting,2026-08-27 16:26:00,9811049171,COMMANDO-15
+PCR-DL-080050,Dwarka,"Sector 10 Main Market, Dwarka",vandalism_arson,2026-05-22 13:12:00,9811051910,COMMANDO-14
+PCR-DL-080051,North,"Old Delhi Railway Station, Platform 1 Exit",robbery_snatching,2026-07-18 08:02:00,9876591665,EAGLE-86
+PCR-DL-080052,Noida Central,Sector 50 Central Market,child_abuse,2026-05-19 03:50:00,9811063856,COMMANDO-26
+PCR-DL-080053,South West,"Palam Colony, Main Palam-Dabri Road",cheating_forgery,2026-07-23 07:03:00,9811012651,COMMANDO-31
+PCR-DL-080054,Shahdara,"Surajmal Vihar, Near Cross River Mall",rioting,2026-08-25 10:17:00,9811067896,COMMANDO-23
+PCR-DL-080055,Outer North,"GT Karnal Road, Singhu Border",rioting,2026-05-10 22:32:00,9811084537,COMMANDO-11
+PCR-DL-080056,Dwarka,"Sector 10 Main Market, Dwarka",child_abuse,2026-07-07 10:18:00,9876562028,EAGLE-26
+PCR-DL-080057,New Delhi,"Mandir Marg, Sector 4, Gole Market",robbery_snatching,2026-09-18 11:22:00,9811021847,COMMANDO-28
+PCR-DL-080058,New Delhi,"Mandir Marg, Sector 4, Gole Market",rioting,2026-06-22 06:17:00,9811011166,COMMANDO-40
+PCR-DL-080059,Shahdara,Seemapuri Main Border,murder,2026-09-27 19:25:00,9811096816,COMMANDO-33
+PCR-DL-080060,Faridabad NIT,NIT 5 Market Road,domestic_violence,2026-07-09 20:45:00,9811077802,COMMANDO-25
+PCR-DL-080061,Central,GB Road near Ajmeri Gate,hit_and_run,2026-06-22 21:54:00,9876544003,EAGLE-64
+PCR-DL-080062,South East,Okhla Industrial Area Phase 3,child_abuse,2026-07-04 15:08:00,9811033995,COMMANDO-31
+PCR-DL-080063,North,Mukherjee Nagar Commercial Complex,rioting,2026-07-09 18:18:00,9811017035,COMMANDO-50
+PCR-DL-080064,North,Mukherjee Nagar Commercial Complex,robbery_snatching,2026-05-28 04:08:00,9811084632,COMMANDO-39
+PCR-DL-080065,South West,Mahipalpur Bypass near NH-48,assault,2026-09-25 05:31:00,9811066847,COMMANDO-50
+PCR-DL-080066,Outer North,Shahbad Dairy Block A,cheating_forgery,2026-05-13 00:17:00,9876511845,EAGLE-52
+PCR-DL-080067,Noida Central,"Sector 18 Atta Market, Commercial Hub",domestic_violence,2026-07-05 03:24:00,9811015992,COMMANDO-29
+PCR-DL-080068,West,"Kirti Nagar Industrial Area, Phase 2",theft_burglary,2026-05-08 07:46:00,9811012872,COMMANDO-47
+PCR-DL-080069,Noida Central,Sector 59 Metro Station area,murder,2026-09-20 01:38:00,9811012587,COMMANDO-13
+PCR-DL-080070,North West,"Shalimar Bagh, AA Block Market",hit_and_run,2026-06-23 21:40:00,9811096725,COMMANDO-16
+PCR-DL-080071,North West,Near Azadpur Mandi Gate 4,drug_trafficking,2026-05-26 13:36:00,9876536433,EAGLE-56
+PCR-DL-080072,Outer North,"GT Karnal Road, Singhu Border",murder,2026-07-08 00:00:00,9811097690,COMMANDO-41
+PCR-DL-080073,West,"Club Road Market, Punjabi Bagh",murder,2026-08-10 08:29:00,9811015170,COMMANDO-28
+PCR-DL-080074,Central,"Ajmal Khan Road, Karol Bagh Market",sexual_offenses,2026-09-09 23:05:00,9811024920,COMMANDO-35
+PCR-DL-080075,Outer,"Outer Ring Road, Paschim Vihar West",assault,2026-05-05 22:46:00,9811064529,COMMANDO-47
+PCR-DL-080076,Gurugram East,"Galleria Market, DLF Phase 4",online_harassment,2026-07-13 17:30:00,9876573979,EAGLE-25
+PCR-DL-080077,Noida Central,Sector 38A near GIP Mall,rioting,2026-06-16 11:42:00,9811090335,COMMANDO-13
+PCR-DL-080078,New Delhi,Tolstoy Marg near KG Marg crossing,assault,2026-07-08 10:17:00,9811094320,COMMANDO-34
+PCR-DL-080079,Outer,"Rohtak Road, Nangloi Chowk",murder,2026-08-11 03:31:00,9811064046,COMMANDO-12
+PCR-DL-080080,Shahdara,Jhilmil Industrial Area,cheating_forgery,2026-06-28 14:21:00,9811069314,COMMANDO-17
+PCR-DL-080081,North West,"Model Town Part 2, Main Market",robbery_snatching,2026-07-12 15:34:00,9876523935,EAGLE-16
+PCR-DL-080082,South West,Kapashera Border check post,rioting,2026-06-04 12:13:00,9811054293,COMMANDO-16
+PCR-DL-080083,Dwarka,"Ramphal Chowk, Sector 7 Dwarka",vandalism_arson,2026-09-16 16:49:00,9811032760,COMMANDO-18
+PCR-DL-080084,North West,"Deep Market, Ashok Vihar Phase 2",rioting,2026-07-13 10:18:00,9811064099,COMMANDO-48
+PCR-DL-080085,Noida Central,Sector 62 IT Park near Electronic City,child_abuse,2026-06-20 22:18:00,9811095208,COMMANDO-21
+PCR-DL-080086,Rohini,Rithala Metro Station Area,child_abuse,2026-08-22 20:23:00,9876511673,EAGLE-77
+PCR-DL-080087,North West,"Deep Market, Ashok Vihar Phase 2",hit_and_run,2026-07-22 08:09:00,9811080932,COMMANDO-12
+PCR-DL-080088,Rohini,"Sector 16 Market, Rohini",kidnapping,2026-06-17 22:18:00,9811064600,COMMANDO-30
+PCR-DL-080089,Dwarka,Sector 12 Metro Station Market,assault,2026-07-15 05:43:00,9811077350,COMMANDO-17
+PCR-DL-080090,Outer,Mangolpuri Industrial Area Phase 1,theft_burglary,2026-05-11 14:45:00,9811052287,COMMANDO-48
+PCR-DL-080091,Central,"Asaf Ali Road, Turkman Gate",hit_and_run,2026-07-03 14:38:00,9876518936,EAGLE-75
+PCR-DL-080092,South East,Badarpur Border Mathura Road,hit_and_run,2026-09-27 20:00:00,9811041502,COMMANDO-49
+PCR-DL-080093,South East,"Central Market, Lajpat Nagar II",cheating_forgery,2026-05-17 11:32:00,9811048854,COMMANDO-22
+PCR-DL-080094,North East,Khajuri Khas Chowk,vandalism_arson,2026-06-22 20:49:00,9811023621,COMMANDO-23
+PCR-DL-080095,North,Mukherjee Nagar Commercial Complex,robbery_snatching,2026-07-18 02:36:00,9811060860,COMMANDO-38
+PCR-DL-080096,Outer,Sultanpuri Block C Main Road,rioting,2026-05-13 15:16:00,9876515965,EAGLE-20
+PCR-DL-080097,Rohini,Rithala Metro Station Area,rioting,2026-08-13 21:01:00,9811038818,COMMANDO-18
+PCR-DL-080098,Rohini,"Sector 24, Deep Vihar, Rohini",vandalism_arson,2026-09-18 02:19:00,9811055069,COMMANDO-23
+PCR-DL-080099,Outer North,Holambi Kalan Railway Crossing,kidnapping,2026-06-22 18:54:00,9811082045,COMMANDO-14
+PCR-DL-080100,Shahdara,Seemapuri Main Border,hit_and_run,2026-06-22 20:15:00,9811019149,COMMANDO-22
+PCR-DL-080101,West,"Mall Road, Tilak Nagar Metro Gate 2",illicit_storage,2026-05-06 09:10:00,9876557118,EAGLE-28
+PCR-DL-080102,North East,Brijpuri Main Road,domestic_violence,2026-06-21 19:05:00,9811035746,COMMANDO-26
+PCR-DL-080103,North,"Mall Road, Civil Lines",rioting,2026-05-18 08:34:00,9811061445,COMMANDO-24
+PCR-DL-080104,Rohini,"Sector 24, Deep Vihar, Rohini",vandalism_arson,2026-08-06 05:36:00,9811073373,COMMANDO-32
+PCR-DL-080105,Central,"Main Bazar, Paharganj, Near New Delhi Railway Station",cheating_forgery,2026-06-17 11:24:00,9811015230,COMMANDO-30
+PCR-DL-080106,North West,"Ring Road, Netaji Subhash Place",identity_theft,2026-09-19 16:18:00,9876559613,EAGLE-57
+PCR-DL-080107,Noida Central,Sector 62 IT Park near Electronic City,domestic_violence,2026-08-06 07:04:00,9811034498,COMMANDO-20
+PCR-DL-080108,Rohini,"Sector 16 Market, Rohini",vandalism_arson,2026-08-16 06:37:00,9811012942,COMMANDO-25
+PCR-DL-080109,Central,"Asaf Ali Road, Turkman Gate",vandalism_arson,2026-05-06 08:59:00,9811088558,COMMANDO-46
+PCR-DL-080110,Dwarka,Bindapur Pocket 4 Main Road,vandalism_arson,2026-09-22 16:16:00,9811054914,COMMANDO-39
+PCR-DL-080111,North,Mukherjee Nagar Commercial Complex,robbery_snatching,2026-05-04 23:23:00,9876589365,EAGLE-23
+PCR-DL-080112,South West,Mahipalpur Bypass near NH-48,kidnapping,2026-05-16 21:08:00,9811065139,COMMANDO-33
+PCR-DL-080113,Outer,"Outer Ring Road, Paschim Vihar West",domestic_violence,2026-07-20 17:26:00,9811010932,COMMANDO-46
+PCR-DL-080114,Noida Central,Sector 50 Central Market,cheating_forgery,2026-08-12 03:09:00,9811080268,COMMANDO-37
+PCR-DL-080115,Rohini,Prashant Vihar Outer Ring Road,cheating_forgery,2026-06-12 17:35:00,9811085713,COMMANDO-32
+PCR-DL-080116,South East,"Nehru Place Computer Market, Pragati Tower",domestic_violence,2026-06-04 14:45:00,9876590481,EAGLE-17
+PCR-DL-080117,South West,Mahipalpur Bypass near NH-48,domestic_violence,2026-05-03 08:14:00,9811014948,COMMANDO-34
+PCR-DL-080118,Outer,"Outer Ring Road, Paschim Vihar West",domestic_violence,2026-05-07 21:59:00,9811088579,COMMANDO-42
+PCR-DL-080119,Rohini,"Sector 3 Market, Rohini",murder,2026-08-19 06:33:00,9811082036,COMMANDO-28
+PCR-DL-080120,Faridabad NIT,Old Faridabad Railway Road,rioting,2026-09-01 08:11:00,9811019487,COMMANDO-42
+PCR-DL-080121,Shahdara,"Grand Trunk Road, Shahdara Chowk",hit_and_run,2026-09-18 07:26:00,9876583815,EAGLE-72
+PCR-DL-080122,New Delhi,Tolstoy Marg near KG Marg crossing,child_abuse,2026-06-26 10:26:00,9811011274,COMMANDO-26
+PCR-DL-080123,South East,"Nehru Place Computer Market, Pragati Tower",domestic_violence,2026-08-11 11:13:00,9811099536,COMMANDO-22
+PCR-DL-080124,Gurugram East,"Cyber Hub, DLF Cyber City, Sector 24",theft_burglary,2026-06-27 19:22:00,9811020287,COMMANDO-41
+PCR-DL-080125,North East,Khajuri Khas Chowk,hit_and_run,2026-05-17 13:30:00,9811099959,COMMANDO-21
+PCR-DL-080126,Dwarka,Bindapur Pocket 4 Main Road,cheating_forgery,2026-05-10 23:25:00,9876586153,EAGLE-23
+PCR-DL-080127,North East,Khajuri Khas Chowk,robbery_snatching,2026-08-20 10:23:00,9811037594,COMMANDO-36
+PCR-DL-080128,West,"Club Road Market, Punjabi Bagh",rioting,2026-06-05 23:09:00,9811065249,COMMANDO-41
+PCR-DL-080129,West,"District Centre, Janakpuri",robbery_snatching,2026-05-23 05:03:00,9811092557,COMMANDO-16
+PCR-DL-080130,Dwarka,"Ramphal Chowk, Sector 7 Dwarka",child_abuse,2026-07-01 13:07:00,9811036077,COMMANDO-46
+PCR-DL-080131,North East,Karawal Nagar Chowk,illicit_storage,2026-08-03 18:27:00,9876593962,EAGLE-54
+PCR-DL-080132,Outer North,Shahbad Dairy Block A,cheating_forgery,2026-07-23 08:38:00,9811057600,COMMANDO-47
+PCR-DL-080133,Noida Central,Sector 62 IT Park near Electronic City,assault,2026-07-24 22:47:00,9811062041,COMMANDO-16
+PCR-DL-080134,Outer,Mundka Metro Station Depot,sexual_offenses,2026-07-08 07:47:00,9811026569,COMMANDO-18
+PCR-DL-080135,Noida Central,Botanical Garden Metro Station interchange,child_abuse,2026-08-28 17:59:00,9811027709,COMMANDO-44
+PCR-DL-080136,South West,Kapashera Border check post,online_harassment,2026-09-21 12:19:00,9876573131,EAGLE-80
+PCR-DL-080137,East,"Kalyanpuri Block 12, Main Road",kidnapping,2026-08-25 15:19:00,9811088250,COMMANDO-24
+PCR-DL-080138,New Delhi,"Janpath Market Lane 3, New Delhi",domestic_violence,2026-08-27 12:14:00,9811091962,COMMANDO-25
+PCR-DL-080139,Noida Central,Sector 59 Metro Station area,cheating_forgery,2026-07-04 20:29:00,9811091625,COMMANDO-41
+PCR-DL-080140,South West,Najafgarh Main Bus Stand,robbery_snatching,2026-05-05 00:31:00,9811050838,COMMANDO-41
+PCR-DL-080141,Rohini,"Sector 24, Deep Vihar, Rohini",theft_burglary,2026-05-11 02:43:00,9876519356,EAGLE-80
+PCR-DL-080142,Gurugram East,"Golf Course Road, Sector 54",assault,2026-08-25 14:15:00,9811022315,COMMANDO-43
+PCR-DL-080143,Central,"Ajmal Khan Road, Karol Bagh Market",domestic_violence,2026-05-08 20:27:00,9811046188,COMMANDO-47
+PCR-DL-080144,North West,"Model Town Part 2, Main Market",robbery_snatching,2026-07-25 02:15:00,9811099908,COMMANDO-49
+PCR-DL-080145,North East,Karawal Nagar Chowk,sexual_offenses,2026-06-16 07:20:00,9811035292,COMMANDO-11
+PCR-DL-080146,Dwarka,"Ramphal Chowk, Sector 7 Dwarka",child_abuse,2026-06-16 17:00:00,9876571393,EAGLE-46
+PCR-DL-080147,Faridabad NIT,"NIT 1 Main Market, BK Chowk",rioting,2026-09-12 14:00:00,9811091229,COMMANDO-33
+PCR-DL-080148,South East,"Nehru Place Computer Market, Pragati Tower",sexual_offenses,2026-09-05 19:18:00,9811052208,COMMANDO-17
+PCR-DL-080149,Central,"Ansari Road, Daryaganj",domestic_violence,2026-08-17 19:44:00,9811038930,COMMANDO-48
+PCR-DL-080150,North,Kashmere Gate Ring Road Flyover,cheating_forgery,2026-07-18 23:56:00,9811017641,COMMANDO-49
+PCR-DL-080151,East,Laxmi Nagar Commercial Complex,murder,2026-07-27 01:31:00,9876540279,EAGLE-79
+PCR-DL-080152,South West,Najafgarh Main Bus Stand,vandalism_arson,2026-08-04 05:50:00,9811076151,COMMANDO-31
+PCR-DL-080153,South West,Mahipalpur Bypass near NH-48,robbery_snatching,2026-07-20 07:36:00,9811043303,COMMANDO-33
+PCR-DL-080154,Dwarka,Sector 12 Metro Station Market,domestic_violence,2026-09-05 09:00:00,9811051275,COMMANDO-11
+PCR-DL-080155,Central,GB Road near Ajmeri Gate,rioting,2026-07-26 09:05:00,9811020118,COMMANDO-30
+PCR-DL-080156,Gurugram East,"Golf Course Road, Sector 54",rioting,2026-07-20 01:06:00,9876517329,EAGLE-53
+PCR-DL-080157,Rohini,Rithala Metro Station Area,hit_and_run,2026-08-02 09:33:00,9811084044,COMMANDO-19
+PCR-DL-080158,Outer,"Peeragarhi Chowk, Rohtak Road",kidnapping,2026-08-05 04:21:00,9811016463,COMMANDO-45
+PCR-DL-080159,Outer,"Peeragarhi Chowk, Rohtak Road",rioting,2026-08-18 06:31:00,9811090739,COMMANDO-43
+PCR-DL-080160,South East,"Kalkaji Main Market, D Block",sexual_offenses,2026-05-22 13:27:00,9811052039,COMMANDO-32
+PCR-DL-080161,Dwarka,Sector 21 Inter State Metro Terminal,drug_trafficking,2026-06-27 05:59:00,9876517148,EAGLE-42
+PCR-DL-080162,West,"Subhash Nagar Market, Block 6",theft_burglary,2026-05-11 06:47:00,9811078585,COMMANDO-26
+PCR-DL-080163,Faridabad NIT,Old Faridabad Railway Road,vandalism_arson,2026-07-06 01:18:00,9811045557,COMMANDO-13
+PCR-DL-080164,Rohini,"Sector 7 Main Road, Rohini",assault,2026-07-16 19:34:00,9811075621,COMMANDO-39
+PCR-DL-080165,Faridabad NIT,"Ballabgarh Bus Stand, Mathura Road",sexual_offenses,2026-06-01 11:43:00,9811049626,COMMANDO-25
+PCR-DL-080166,Noida Central,"Sector 18 Atta Market, Commercial Hub",online_harassment,2026-08-08 23:37:00,9876529884,EAGLE-54
+PCR-DL-080167,South East,Govindpuri Extension Gali 7,theft_burglary,2026-06-21 04:37:00,9811078656,COMMANDO-18
+PCR-DL-080168,Outer North,Shahbad Dairy Block A,hit_and_run,2026-06-11 04:46:00,9811063903,COMMANDO-29
+PCR-DL-080169,Dwarka,Bindapur Pocket 4 Main Road,theft_burglary,2026-09-19 19:14:00,9811013418,COMMANDO-32
+PCR-DL-080170,Rohini,"Sector 7 Main Road, Rohini",sexual_offenses,2026-05-14 00:59:00,9811097993,COMMANDO-22
+PCR-DL-080171,South,"Press Enclave Road, Saket District Centre",robbery_snatching,2026-09-28 14:16:00,9876542346,EAGLE-65
+PCR-DL-080172,Outer,"Rohtak Road, Nangloi Chowk",murder,2026-09-24 18:38:00,9811069886,COMMANDO-12
+PCR-DL-080173,Outer,"Rohtak Road, Nangloi Chowk",assault,2026-06-14 09:39:00,9811094685,COMMANDO-38
+PCR-DL-080174,North,"Chandni Chowk main road, near Fountain",robbery_snatching,2026-06-15 18:57:00,9811042778,COMMANDO-30
+PCR-DL-080175,South West,Mahipalpur Bypass near NH-48,robbery_snatching,2026-09-23 12:46:00,9811059886,COMMANDO-12
+PCR-DL-080176,West,"Kirti Nagar Industrial Area, Phase 2",domestic_violence,2026-07-14 08:40:00,9876592110,EAGLE-34
+PCR-DL-080177,North West,"Deep Market, Ashok Vihar Phase 2",rioting,2026-08-18 00:38:00,9811087183,COMMANDO-40
+PCR-DL-080178,Dwarka,Sector 12 Metro Station Market,theft_burglary,2026-09-21 17:52:00,9811029432,COMMANDO-13
+PCR-DL-080179,Shahdara,"ISBT Anand Vihar, Delhi Terminal",murder,2026-08-24 18:23:00,9811052312,COMMANDO-33
+PCR-DL-080180,Outer,Mangolpuri Industrial Area Phase 1,vandalism_arson,2026-07-17 13:33:00,9811090223,COMMANDO-13
