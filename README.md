@@ -9,7 +9,7 @@
 | **Team Name** | Team_Rocket |
 | **Track** | AI |
 | **Team Lead** | Ujjwal Shakya |
-| **Members** | Ujjwal Shakya (Leader), Lakshya Samay Singh, Kshitij Sharma, Ruthvik Kattamanchi |
+| **Members** | Lakshya Samay Singh, Kshitij Sharma, Ruthvik Kattamanchi |
 
 ---
 
